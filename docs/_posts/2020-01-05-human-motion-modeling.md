@@ -21,6 +21,19 @@ A quick note before continuing: this is not intended to be a complete tour on th
 
 # HuMoP 
 
+### The dataset 
+**Human3.6M**
+Human 3.6M (H3.6M) dataset [22], a large-scale publicly
+available dataset including 3.6 million 3D mocap data. This is an important and widely used benchmark in human motion analysis. H3.6M includes seven actors performing 15 varied activities, such as walking, smoking, engaging in a discussion, and taking pictures.
+
+Dataset available at http://mocap.cs.cmu.edu/. 
+
+### Problem formulation 
+We represent human motion as sequential data. Given a motion sequence, we predict possible short-term and long-term motion in the future. That is, we aim to find a mapping P from an input sequence to an output sequence. The input sequence of length n is denoted as X = {x1, x2, ..., xn}, where xi ∈ RK (i ∈ [1, n]) is a mocap vector that consists of a set of 3D body joint angles with their exponential map representations [33] and K is the number of joint angles. Consistent with [48, 12, 31], we standardize the inputs and focus on relative rotations between joints, since they contain information of the actions. We predict the future motion sequence in the next m timesteps as the output, denoted as
+Xb = {bxn+1, bxn+2, ..., bxn+m}, where
+xbj ∈ RK (j ∈ [n + 1, n +m]) is the predicted mocap vector at the j-th timestep
+
+
 ### Two different tasks
 - short term prediction 
 - long term prediction
@@ -36,10 +49,6 @@ the literature often distinguishes between short-term and long-term prediction t
 - qualitative 
 - quantitative 
 
-### The dataset 
-**Human3.6M**
-
-Each pose at time t consists of joint angles Xt = [x1, x2, ...xn]
 
 
 ## On human motion prediction using recurrent neural networks
@@ -231,44 +240,160 @@ by Liang-Yan Gui, Yu-Xiong Wang, Xiaodan Liang, and Jos´e M. F. Moura<br>
 <div align="center"><i>Figure 2 from the paper.</i></div>
 <br>
 
+- An encoder-decoder sequence constitute the predictor. Trained to minime Euclidean btw predicted and true. The encoder learns a hidden representation from the input sequence. The hidden representation and a seed motion frame are then fed into the decoder to produce the output sequence. 
+Other modifications such as attention mechanisms [3] and bi-directional encoders [42] could be also incorporated into this general architecture.
+#### Note! Nobody tried with attention? 
+- Residual connections 
+- Ground truth one hot labels
+- frame level Geodesic loss 
+- Our entire model thus consists of a single predictor and two discriminators
+-We integrate the geodesic (regression) loss and the two adversarial losses, and obtain the optimal predictor by jointly optimizing the following minimax objective function: P∗ = argmin
+max λ Lf P Df ,Dc  adv (P, Df) + Lc adv (P, Dc) + Lgeo (P) 
+
+
+
+
 ### Take-away points
 
 #### Human-like motion prediction
 global sequence-level fidelity and continuity
 
 #### geodesic loss
+Idea: the distance between two 3D rotations.
+
 Geometric structure aware loss function at the frame level, 
 that is the shortest path between two rotations.
-This geometrically more meaningful loss leads to more precise distance measurement and is computationally inexpensive
+This geometrically more meaningful loss leads to more precise distance measurement and is computationally inexpensive. 
 
 #### Adversarial training at the sequence level
-We introduce two global discriminators to validate the prediction while casting our predictor as a generator
+This is partially because using a frame-wise regression loss solely cannot check the fidelity of the entire predicted sequence from a global perspective
+
+We introduce two global discriminators to validate the prediction while casting our predictor as a generator.
 
 Intuitively, the fidelity discriminator aims to examine whether the generated motion sequence is humanlike and plausible overall, and the continuity discriminator is responsible for checking whether the predicted motion sequence is coherent with the input sequence without a noticeable discontinuity between them.
 
+The quality of the predictor P is then judged by evaluating how well bX fools Df
+and how well the concatenated sequence {X, bX} fools Dc
+
 ### Similarities with previous works 
 
+#### Martinez architecture for predictor
+
+#### Residual connections for smoothness
+
 
 
 <br>
 <br>
------
 
-
-## Title
-by authors<br>
+## Learning Trajectory Dependencies for Human Motion Prediction
+by Wei Mao, Miaomiao Liu, Mathieu Salzmann, Hongdong Li<br>
 
 ---- 
 
 ### The architecture 
 
-![The architecture]({{site.baseurl}}/assets/images/Ghosh.png )
-<div align="center"><i>Figure 1 from the paper.</i></div>
+![The architecture]({{site.baseurl}}/assets/images/Mao.png )
+<div align="center"><i>Figure 2 from the paper.</i></div>
 <br>
+It consists of 12 residual blocks, each of which comprises 2 graph convolutional layers and two additional graph convolutional layers
+
+
+- DCT temporal encoding.
+given a temporal sequence X1:N, we first replicate the last pose, xN, T times to generate a temporal sequence of length N + T. We then compute the DCT coefficients of this sequence, and aim to predict those of the true future sequence X1:N+T. This naturally translates to estimating a residual vector in frequency space and was motivated by the zero-velocity baseline in [17]. we aim to learn the residuals
+between the input and output DCT representations.
+- Graph convolutional layer.
+Using a different learnable A for every graph convolutional layer allows the network to adapt the connectivity for different operations.
+
 
 ### Take-away points
 
+#### A feed-forward approach 
+Here, instead, we propose to directly encode the temporal nature of human motion in our representation and work in trajectory space.
+
+Let us denote by
+x˜k =
+(xk,1, xk,2, xk,3, · · · , xk,N) the trajectory for the kth joint across N frames.
+we propose to adopt a trajectory representation based on the Discrete Cosine Transform (DCT). The main motivation behind this is that, by discarding the high frequencies, the DCT can provide a more compact representation, which nicely captures the smoothness of human motion, particularly in terms of 3D coordinates.
+
+To make use of the DCT representation, instead of treating motion prediction as the problem of learning a mapping from X1:N to XN+1:N+T, we reformulate it as one of learning a mapping between observed and future DCT coefficients
+
+#### Learned graph representation of the human body 
+spatial dependency of human pose is encoded by treating a human pose as a generic graph (rather than a human skeletal kinematic tree) formed by links between every pair of body joints. Instead of using a pre-defined graph structure, we design a new graph convolutional network to learn graph connectivity automatically. This allows the network to capture long range dependencies beyond that of human kinematic tree.
+
+
+
+
 ### Similarities with previous works 
+
+
+
+<br>
+<br>
+
+## Structured Prediction Helps 3D Human Motion Modelling
+by Emre Aksan,Manuel Kaufmann, Otmar Hilliges<br>
+
+---- 
+<br>
+The proposed layer is agnostic to the underlying network and can be used with existing architectures for motion modelling
+
+
+### Take-away points
+
+#### AMASS 
+A new dataset.
+The dataset contains 8593 sequences, which comprise a total of 9084918 frames sampled at 60 Hz. This is roughly equivalent to 42 hours of recording, making AMASS about 14 times bigger than H3.6M (632894 frames at 50 Hz).
+
+#### SPL 
+A structure prediction layer.
+successfully exploiting spatial priors in human motion modelling.
+
+xt ∈ RN is a concatenation of K joints x(k)
+xt = [x(hip) t
+t ∈ RM: , x(spine)
+t . . . x(lwrist) t , x(lhand) t ]
+
+the SP-layer takes
+a context representation ht as input. Here, ht is assumed to summarize the motion sequence until time t. Without loss of generality, we assume this to be a hidden RNN state or its projection. 
+While existing work typically leverages several dense layers to predict the N-dimensional pose vector xt from ht, our SP-layer predicts each joint individually with separate smaller networks:
+
+pθ(xt) =K k=1
+pθ(x(k) t | parent(x(k) t ), ht)
+
+pθ(xt) = pθ(x(hip) t | ht)pθ(x(spine) t | x(hip) t , ht) · · ·
+
+In this formulation each joint receives information about its own configuration and that of the immediate parent both explicitly, through the conditioning on the parent joint’s prediction, and implicitly via the context ht
+
+First, the proposed factorization allows for integration of a structural prior in the form of a hierarchical architecture where each joint is modelled by a different network. This allows the model to learn dedicated representations per joint and hence saves model capacity.
+
+Because the per-joint decomposition leads to many small separate networks, we can think of an SP-layer as a dense layer where some connections have been set to zero explicitly by leveraging domain knowledge
+
+<div align="center">
+<img src="{{site.baseurl}}/assets/images/Aksan.png" width="500"/>
+</div>
+<div align="center"><i>Figure 2 from the paper.</i></div>
+
+#### Per joint loss
+
+We additionally propose to perform a similar decomposition in the objective function that leads to further improvements
+
+
+<br>
+
+
+### Similarities with previous works 
+<br>
+<br>
+
+# Further reading 
+Structural-rnn: Deep learning on spatiotemporal graphs. 
+
+
+
+
+
+
 
 
 
