@@ -1,35 +1,58 @@
 ---
 layout: post
-title:  "Human motion prediction"
+title:  "Stuff on human motion prediction"
 date:   2020-05-01 10:51:43 +0100
 categories: topic review
 ---
-Hello everyone, welcome to my first topic review!<br>
-**First things first**: *why should we be insteresed in Human motion prediction*? 
-To answer this question let me borrow the words of the authors of the first paper I'm going to propose to your attention : 
-> An important component of our capacity to interact with
-the world resides in the ability to predict its evolution over time. Handing an object to another person, playing sports, or simply walking in a crowded street would be extremely challenging without our understanding of how people move, and our ability to predict what they are likely to do in the following instants. Similarly, machines that are able to perceive and interact with moving people, either in physical or virtual environments, must have a notion of how people move.<br>
+<head>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+      }
+    });
+  </script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> 
+</head>
 
-*Why am writing this topic review?* The reason is that I am starting a new project on the topic and I'm anyway going to read a few papers on the subject, and -as I've recently discovered during one of my experiments- sharing your work usually has the effect of pushing your quality bar higher. <br>
+<h3>Hello everyone, welcome to my first topic review!</h3>
 
 
-Now let me cut the premises here and dive into Human Motion Prediction. 
+> <h4>Why should we be insteresed in Human motion prediction?</h4>
 
-A quick note before continuing: this is not intended to be a complete tour on the history of the topic, but instead a look at some of the latest and most succesful approaches. 
-<br> 
-<br>
+To answer this question let me borrow the words of the authors of the first paper I'm going to propose to your attention. *"An important component of our capacity to interact with
+the world resides in the ability to predict its evolution over time. Handing an object to another person, playing sports, or simply walking in a crowded street would be extremely challenging without our understanding of how people move, and our ability to predict what they are likely to do in the following instants. Similarly, machines that are able to perceive and interact with moving people, either in physical or virtual environments, must have a notion of how people move."*<br>
 
-# HuMoP 
+And now let's answer the second question that may have crossed your mind: 
 
-### The dataset 
-**Human3.6M**
-Human 3.6M (H3.6M) dataset [22], a large-scale publicly
-available dataset including 3.6 million 3D mocap data. This is an important and widely used benchmark in human motion analysis. H3.6M includes seven actors performing 15 varied activities, such as walking, smoking, engaging in a discussion, and taking pictures.
+><h4>Why am writing this topic review?</h4> 
 
-Dataset available at http://mocap.cs.cmu.edu/. 
+The reason is that I am starting a new project on the topic and I'm anyway going to read a few papers on the subject. As I've recently discovered during one of my experiments on productivity sharing your work usually has the effect of pushing your quality bar higher. <br>
+Now let me cut here the premises here and dive into **Human Motion Prediction**. 
 
-### Problem formulation 
-We represent human motion as sequential data. Given a motion sequence, we predict possible short-term and long-term motion in the future. That is, we aim to find a mapping P from an input sequence to an output sequence. The input sequence of length n is denoted as X = {x1, x2, ..., xn}, where xi ∈ RK (i ∈ [1, n]) is a mocap vector that consists of a set of 3D body joint angles with their exponential map representations [33] and K is the number of joint angles. Consistent with [48, 12, 31], we standardize the inputs and focus on relative rotations between joints, since they contain information of the actions. We predict the future motion sequence in the next m timesteps as the output, denoted as
+Just *a quick note* before jumping into the interesting stuff: I am not going to look at the whole history on the topic, but instead only at a carefully selected set approaches, which also happen to be among the latest and most succesfull ones up until now. 
+
+# Human motion prediction
+
+One of the best ways to introduce a problem, in my opinion, is to talk about the available data. <br>
+No machine learning problem can exist without data. 
+
+#### The H3.6M dataset
+[Human 3.6M](http://mocap.cs.cmu.edu/) (H3.6M) is a large-scale publicly available dataset including 3.6 million 3D motion-caption (abbreviated to mocap) data. 
+H3.6M has constituted a widely used benchmark in human motion analysis and only [recently]() new datasets started emerging. 
+
+The data consists of the recording of seven different actors performing 15 varied activities, such as walking, smoking, engaging in a discussion, and taking pictures. While performing these activities in front of multiple cameras, the humans wear a black jumpsuit with 41 markers taped on. The recordings are then processed to obtain a 3D representation of the movement in terms of markers position or joints-rotation for each frame.
+
+Formally speaking, the input data ${X}$ is a sequence of length $T$ ,$\{(x_1, x_2, ..., x_T)\}$, where a frame $x_t \in{R^N}$ denotes the $N$-dimensional body pose. 
+$N$ depends on the number of joints in the skeleton, $K$, and the size $M$ of the per-joint representation, i.e. $N = K · M$. <br>
+A number of joint-representations has been proposed over the past few years and that of the representation scheme is a choice that has been and still is extensively discussed.<br>
+A quite common (and easy to come up with) representation is known as *angle-axis* or *exponential maps*: each joint is associated with an axis $w$ (for which you need 3 numbers), and an angle $\alpha$ (to identify which you need (at least) another 3 numbers).<br>
+Other representation schemes include *rotation matrices, quaternions, or 3D positions*.
+
+#### Problem formulation 
+Given the input we've just mentioned, the problem of human motion prediction can be phrased as the prediction of possible short-term and long-term motion in the future. 
+More formally, we aim to find a mapping P from an input sequence to an output sequence. The input sequence of length n is denoted as X = {x1, x2, ..., xn}, where xi ∈ RK (i ∈ [1, n]) is a mocap vector that consists of a set of 3D body joint angles with their exponential map representations [33] and K is the number of joint angles. Consistent with [48, 12, 31], we standardize the inputs and focus on relative rotations between joints, since they contain information of the actions. We predict the future motion sequence in the next m timesteps as the output, denoted as
 Xb = {bxn+1, bxn+2, ..., bxn+m}, where
 xbj ∈ RK (j ∈ [n + 1, n +m]) is the predicted mocap vector at the j-th timestep
 
