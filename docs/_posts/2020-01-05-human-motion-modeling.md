@@ -19,9 +19,9 @@ categories: topic review
 <h3>Hello everyone, welcome to my first topic review!</h3>
 
 
-> <h4>Why should we be insteresed in Human motion prediction?</h4>
+> <h4>Why should we be interested in Human motion prediction?</h4>
 
-To answer this question let me borrow the words of the authors of the first paper I'm going to propose to your attention. *"An important component of our capacity to interact with
+To answer this question let me borrow the words of the authors of the first paper I'm going to submit to your attention. *"An important component of our capacity to interact with
 the world resides in the ability to predict its evolution over time. Handing an object to another person, playing sports, or simply walking in a crowded street would be extremely challenging without our understanding of how people move, and our ability to predict what they are likely to do in the following instants. Similarly, machines that are able to perceive and interact with moving people, either in physical or virtual environments, must have a notion of how people move."*<br>
 
 And now let's answer the second question that may have crossed your mind: 
@@ -31,12 +31,21 @@ And now let's answer the second question that may have crossed your mind:
 The reason is that I am starting a new project on the topic and I'm anyway going to read a few papers on the subject. As I've recently discovered during one of my experiments on productivity sharing your work usually has the effect of pushing your quality bar higher. <br>
 Now let me cut here the premises here and dive into **Human Motion Prediction**. 
 
-Just *a quick note* before jumping into the interesting stuff: I am not going to look at the whole history on the topic, but instead only at a carefully selected set approaches, which also happen to be among the latest and most succesfull ones up until now. 
+Just *a quick note* before jumping into the interesting stuff: I am not going to look at the whole history on the topic, but instead only at a carefully selected set approaches, which also happen to be among the latest and most successful ones up until now. <br>
+<br>
+<br>
 
-# Human motion prediction
+
+## Human motion prediction
+
+![Human motion data]({{site.baseurl}}/assets/images/hmp.png)
+<div align="center"><i>Figure taken from Martinez et al.</i></div>
+<br>
 
 One of the best ways to introduce a problem, in my opinion, is to talk about the available data. <br>
 No machine learning problem can exist without data. 
+<br> 
+<br> 
 
 #### The H3.6M dataset
 [Human 3.6M](http://mocap.cs.cmu.edu/) (H3.6M) is a large-scale publicly available dataset including 3.6 million 3D motion-caption (abbreviated to mocap) data. 
@@ -47,34 +56,33 @@ The data consists of the recording of seven different actors performing 15 varie
 Formally speaking, the input data ${X}$ is a sequence of length $T$ ,$\{(x_1, x_2, ..., x_T)\}$, where a frame $x_t \in{R^N}$ denotes the $N$-dimensional body pose. 
 $N$ depends on the number of joints in the skeleton, $K$, and the size $M$ of the per-joint representation, i.e. $N = K · M$. <br>
 A number of joint-representations has been proposed over the past few years and that of the representation scheme is a choice that has been and still is extensively discussed.<br>
-A quite common (and easy to come up with) representation is known as *angle-axis* or *exponential maps*: each joint is associated with an axis $w$ (for which you need 3 numbers), and an angle $\alpha$ (to identify which you need (at least) another 3 numbers).<br>
-Other representation schemes include *rotation matrices, quaternions, or 3D positions*.
+A quite common (and easy to come up with) representation is known as *angle-axis* or *exponential maps*: each joint is associated with an axis $w$ (for which you need 3 numbers), and an angle $\alpha$ (at least 3 more numbers in $R^3$). Usually, the input is standardized, discarding the information on the exact rotation vector of each joint, to focus on relative rotations between joints, since they contain information of the actions. <br> Other representation schemes include *rotation matrices, quaternions, or 3D positions*. 
+<br> 
+<br> 
 
 #### Problem formulation 
-Given the input we've just mentioned, the problem of human motion prediction can be phrased as the prediction of possible short-term and long-term motion in the future. 
-More formally, we aim to find a mapping P from an input sequence to an output sequence. The input sequence of length n is denoted as X = {x1, x2, ..., xn}, where xi ∈ RK (i ∈ [1, n]) is a mocap vector that consists of a set of 3D body joint angles with their exponential map representations [33] and K is the number of joint angles. Consistent with [48, 12, 31], we standardize the inputs and focus on relative rotations between joints, since they contain information of the actions. We predict the future motion sequence in the next m timesteps as the output, denoted as
-Xb = {bxn+1, bxn+2, ..., bxn+m}, where
-xbj ∈ RK (j ∈ [n + 1, n +m]) is the predicted mocap vector at the j-th timestep
+Given a fixed length input sequence, as the one I've just introduced to you, the problem of human motion prediction can be phrased as the prediction of the future motion of the subject, both short-term and long-term. <br>
+More formally, to goal of Human Motion Prediction is to find a mapping P from an input sequence of length $T_1$ to an output sequence of length $T_2$.
+<br> 
+<br> 
+
+#### Two different tasks
+From the research on the field it has emerged that the short-term and the long-term prediction are two very different problems, and should hence be treated separately. <br>
+Historically, the best models on short-term prediction perform poorly on the long-term variant and vice versa. The reason for this is that while short-term prediction is mainly about completing a movement realistically (not breaking the rules of physics for instance), long-term prediction is more about being able to recognize and continue the intention of the human actor : if someone is about to make a phone call, you don't expect them to start running, no matter how realistic the movement may seem!<br>
+Short-term tasks are hence often referred to as prediction tasks and can be assessed quantitatively by comparing the model prediction to a reference recording through a distance metric. <br> 
+On the other hang long-term tasks are often referred to as generation tasks and are harder to assess quantitatively. For these cases, the prediction quality is usually evaluated *by hand*.
+<br>
+<br> 
 
 
-### Two different tasks
-- short term prediction 
-- long term prediction
-the literature often distinguishes between short-term and long-term prediction tasks. Short-term tasks are often referred to as prediction tasks and can be assessed quantitatively by comparing the model prediction to a reference recording through a distance metric. Long-term tasks are often referred to as generation tasks and are harder to assess quantitatively. For these cases, the prediction quality can be evaluated by human evaluation studies.
-
-### Inherent constraints 
-
-- Skeletal configurations 
-- Temporal coherence
-
-### Loss quantification 
-
-- qualitative 
-- quantitative 
+## The papers 
+Finally, in this section I am going to discuss 6 selected papers on the topic, by looking into the main ideas, highlighting commonalities and differences.
+<br>
+<br>
 
 
 
-## On human motion prediction using recurrent neural networks
+# On human motion prediction using recurrent neural networks
 by Julieta Martinez, Michael J. Black, and Javier Romero. <br>
 
 ---- 

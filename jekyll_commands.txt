@@ -2,3 +2,5 @@ bundle exec jekyll build
 bundle exec jekyll serve
 bundle update
 bundle info --path minima
+
+NOTE: PREPEND bundle exec to avoid version conflicts!
