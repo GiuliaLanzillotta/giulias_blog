@@ -99,7 +99,7 @@ I enjoyed reading this paper: the authors proposed many (though not too many) in
 
 # The architecture 
 
-![The architecture]({{site.baseurl}}/assets/images/Martinez1.png )
+![The architecture]({{site.baseurl}}/assets/images/Martinez1.png)
 <div align="center"><i>Figure 2 from the paper.</i></div>
 <br>
 The architecture is a rather classic **seq2seq** model with *GRU* cells, with the addition of *residual connections* in the decoder and, interestingly, *parameter sharing* between encoder and decoder.
