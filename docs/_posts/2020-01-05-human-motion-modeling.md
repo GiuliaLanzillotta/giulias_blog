@@ -258,7 +258,8 @@ This was it for quaternions, now let's proceed with the next paper.
 ### Adversarial Geometry-Aware Human Motion Prediction
 by Liang-Yan Gui, Yu-Xiong Wang, Xiaodan Liang, and Jos´e M. F. Moura<br>
  
-Finally we discuss one of the most influential and successful papers on human motion prediction. The *Adversarial Geometry-Aware Encoder-Decoder*  model (abbreviated *AGED*) reached SOTA results at the time of publication. The approach proposed in this paper builds mainly upon the work of Martinez et al., enriching the solution with the surprisingly powerful adversarial framework. 
+Finally we discuss one of the most influential and successful papers on human motion prediction. The *Adversarial Geometry-Aware Encoder-Decoder*  model (abbreviated *AGED*) reached SOTA results at the time of publication. The approach proposed in this paper builds mainly upon the work of Martinez et al., enriching the solution with the surprisingly powerful adversarial framework. <br>
+Although this work markedly outperformed the previous approaches its contribution is limited to the loss definition problem. The authors tackled both the frame-level and sequence-level loss. This remarkable result sheds a light on the already-known-to-be fundamental role of the loss in machine learning problems. 
 
 # The architecture 
 
@@ -266,33 +267,33 @@ Finally we discuss one of the most influential and successful papers on human mo
 <div align="center"><i>Figure 2 from the paper.</i></div>
 <br>
 
-- An encoder-decoder sequence constitute the predictor. Trained to minime Euclidean btw predicted and true. The encoder learns a hidden representation from the input sequence. The hidden representation and a seed motion frame are then fed into the decoder to produce the output sequence. 
-Other modifications such as attention mechanisms [3] and bi-directional encoders [42] could be also incorporated into this general architecture.
-#### Note! Nobody tried with attention? 
-- Residual connections 
-- Ground truth one hot labels
-- frame level Geodesic loss 
-- Our entire model thus consists of a single predictor and two discriminators
--We integrate the geodesic (regression) loss and the two adversarial losses, and obtain the optimal predictor by jointly optimizing the following minimax objective function: P∗ = argmin
-max λ Lf P Df ,Dc  adv (P, Df) + Lc adv (P, Dc) + Lgeo (P) 
+I have to admit that at first sight the architecture design might seem complicated. However, as you'll soon discover by yourself, the idea is easy to grasp and also makes a lot of sense. 
 
-
+In every adversarial framework there must be *generator* and a *discriminator*. <br>
+As a generator the authors use an auto-encoder similar to the one discussed in Martinez et al. The network is trained to minimize the *Geodesic distance* between prediction and ground-truth at the frame level. In the next section I'll discuss the meaning of this specific distance, for now just think of it as an alternative to the more familiar Euclidean distance. The encoder will learn to extract a lower dimensional representation of the input sequence, while the decoder will learn to produce a prediction given a seed motion frame and the encoded version of the input. <br>
+As you can see from the above schema, the model comprises two different discriminators: a *fidelity discriminator* and a *continuity discriminator* (I'll later explain the motivation behind these two names). Both discriminators are recurrent networks, with a dense head on top to produce a binary output. 
 
 
 # Take-away points
 
-#### Human-like motion prediction
-global sequence-level fidelity and continuity
+#### A geodesic loss
+The idea is to find a distance measure that is specific to rotations. The Euclidean measure treats the rotation coordinates as ordinary points in a 3D space. Rotations implicitly encode geometric information which should not be discarded when computing the loss. <br>
+The Geodesic distance measures the *shortest path between two rotations*, and hence is able to capture the inherent geometric structure of rotations. Such a geometrically more meaningful loss leads to more precise distance measurement, with the advantage of being computationally inexpensive. 
 
-#### geodesic loss
-Idea: the distance between two 3D rotations.
+An interesting note is that the geodesic distance *"it's fully equivalent to the quaternion based metric"*. However, computationally speaking, the authors claim that "experimental results" indicate that *"the quaternion based metric led to worse results, possibly due to the need for renormalization of quaternions during optimization"*. 
 
-Geometric structure aware loss function at the frame level, 
-that is the shortest path between two rotations.
-This geometrically more meaningful loss leads to more precise distance measurement and is computationally inexpensive. 
+#### A sequence-level loss
+The issue here is the same that Ghosh et al. addressed with their metric for *naturalness*. As I anticipated in the introduction, it's hard to evaluate quantitatively the quality of the predictions. However, it's fairly easy to argue that a measure of *"plausibility"* is ultimately a necessary ingredient in a network whose goal is to generate *"good-looking"* sequences. Using the authors' argument: 
+> This is partially because using a frame-wise regression loss solely cannot check the fidelity of the entire predicted sequence from a global perspective.
 
-#### Adversarial training at the sequence level
-This is partially because using a frame-wise regression loss solely cannot check the fidelity of the entire predicted sequence from a global perspective
+They're solution is similar in spirit to that of Ghosh et al., in the sense that both avoided the hard problem of explicitly defining such a measure by teaching an additional network to take the part of the critic. While Ghosh et al. ended up connecting the two networks in a collaborative fashion, here Gui et al. adopted an adversarial approach, forcing the generator and the two discriminators to challenge each other. 
+
+Let's first talk about the *fidelity discriminator*. <br>
+This component is fed ground truth and generated sequences in an alternating-fashion, and it's trained to correctly identifying *original* and *fake* inputs. The idea is that such a discriminator should be able to examine whether the generated motion sequence is *human-like and plausible overall*. <br>
+Now to the *continuity discriminator*. <br>
+This input to this network 
+
+The sequence generated by the auto-encoder is fed to this discriminator, 
 
 We introduce two global discriminators to validate the prediction while casting our predictor as a generator.
 
@@ -300,6 +301,15 @@ Intuitively, the fidelity discriminator aims to examine whether the generated mo
 
 The quality of the predictor P is then judged by evaluating how well bX fools Df
 and how well the concatenated sequence {X, bX} fools Dc
+
+
+- Residual connections 
+- Ground truth one hot labels
+- frame level Geodesic loss 
+- Our entire model thus consists of a single predictor and two discriminators
+-We integrate the geodesic (regression) loss and the two adversarial losses, and obtain the optimal predictor by jointly optimizing the following minimax objective function: P∗ = argmin
+max λ Lf P Df ,Dc  adv (P, Df) + Lc adv (P, Dc) + Lgeo (P) 
+
 
 ### Similarities with previous works 
 
