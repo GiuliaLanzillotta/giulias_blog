@@ -46,6 +46,27 @@ Needless to say, everyone is different, and there's no such thing as a <i>one-si
 ## The book
 
 The previous sentence directly brings me to the main critique that I have to make to this book, so finally we start talking about what was supposed to be to topic of this article. <br>
-The book is rich in concepts and is full of food for thought. However, to develop a concept Newport often falls into the <i>details trap</i>.
+The book is rich in concepts and is full of food for thought. However, in my opinion, Newport falls into what I would call the <i>details trap</i> when discussing a new concept. Let me elaborate further. His chapters follow a regular pattern: he starts by explaining the general idea, which he then develops by progressively zooming into it. This scheme probably aims at leaving the reader with as much guidance as possible when it comes to implementation. Going from the theory read in a book to the everyday practice is hard, especially if you're not given any material advice. Unfortunately, as I said before, productivity is a personal journey, and any attempt to shape it into a prescription is doomed to fail. My point is that such fine-grained descriptions of the dos and don'ts is useless if not dangerous. The reader will have to discover at his own expense that all these little tricks need to be patiently fine-tuned to match his life-style, his personality. <br>
+What I've just claimed does not make reading about productivity a waste of time. I nonetheless believe Newport's concepts to be valuable and useful, and I've been experimenting with most of these ideas myself. <br>
+This seems a good point to start diving into the cool stuff in this book. 
 
+#### 1. Embrace boredom
+155
+165!
+#### 2. Attention is key 
+77
 
+#### 3. The scarcity mindset 
+240
+- for him this means scheduling all in advance, leaving spaces and avoiding working on weekday
+- for me this is not possible, I adopt the all in the mornign strategy
+
+#### 4. The purposed benefit approach
+191
+222!
+
+#### 5. Limited resources
+147
+
+#### 6. Measures! 
+138
