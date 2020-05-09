@@ -202,78 +202,63 @@ by Dario Pavllo, Christoph Feichtenhofer, Michael Auli, David Grangier<br>
 
 
 This paper extensively explores the weaknesses of the available representations for three-dimensional poses and extends the domain making use of a new abstraction: *the quaternion*.
-<br> 
+
+
+I will not discuss the architecture for this paper because I believe that the main source of innovation here is in the in-depth analysis of the representation problem.
+<br>
+<br>
+
+
+# Quaternions?
+Let me first clear out any source of confusion. Although the name evokes some sort of esoteric concept, quaternions are just 4-tuples. As [Wikipedia](https://en.wikipedia.org/wiki/Quaternion) puts it : 
+>Quaternions are a number system that extends the complex numbers. [...]<br> 
+Quaternions are generally represented in the form $a + bi + cj + dk$, where $a, b, c$, and $d$ are real numbers, and $i, j$, and $k$ are the fundamental quaternion units.
+
+
+<br>
 
 <div align="center">
-<img src="https://media.giphy.com/media/b3ETeleegHXG0/giphy.gif" width="500"/>
+<img src="https://media.giphy.com/media/zjQrmdlR9ZCM/giphy.gif" width="500"/>
 </div>
-
-<br>
-I will not discuss the architecture for this paper because I believe that the main source of innovation here is in the in-depth analysis of the representation problem.
+<br> 
 
 
-# Quaternions! Quaternions?
+The question running through your head at this point might be something along the line: 
+> What do quaternions have to do with human motion? 
 
-the central innovation is here in the representation of the data. 
+To answer this question, let me first present to you the major shortcomings of the other available representations. Before quaternions were first introduced as a viable alternative two widely used parametrization schemes for rotations in the 3D Euclidean space were *Euler angles* and *Exponential maps*.
 
+Euler angles represent orientations as successive rotations around the axes of a coordinate system. As you might guess, there are multiple ways to compose rotations in order to obtain the same final result. This is why applications that use Euler angles must agree on the particular order convention. A typical Euler rotation vector is a triplet that indicates the rotation around each axis in radians. There are two drawbacks in adopting a Euler angles representation: 
+1. Each rotation is not uniquely identified, since $x$ and $x + 2\pi$ represent the same angle;
+2. The representation space is discontinuous, since it jumps back to $0$ every time the rotation angle reaches $2\pi$.
 
-[Quaternions](https://en.wikipedia.org/wiki/Quaternion) are a 4D extension of complex numbers that form the S3 group, and can be described as realvalued 4-tuples wxyz such that q = w + xi + yj + zk,
-
-Pros : 
-- No singularities: 
-- No discontinuities: 
-- They can be composed and used to compute transformations: Unlike Euler angles, which employ trigonometric functions to compute transformations, quaternion transformations are based on linear operators 
-- They present a simple and elegant way to perform interpolation between rotations
-- more numerically stable, and are more computationally efficient than other representations
-
-Cons: 
-- A disadvantage of quaternions is that they encode
-half-angle rotations, giving rise to the so-called antipodal representations: two possible representations for the same 3D orientation, q and −q.
+The exponential map parametrization scheme, also known as *axis angle representation* was proposed as a more practical alternative to Euler angles. Intuitively, an axis-angle rotation is described by an axis $\hat{e}$ (a 3D unit vector) and a rotation angle $\theta$ around this axis. 
+I am sorry to disappoint you, but exponential maps have the same weaknesses of Euler angles, namely: 
+1. Singularities in the representation;
+2. Discontinuity in the parameter space. 
+3. There is also a third issue with the exponential map representation: <br>
+Multiple rotations cannot be composed into one single rotation. This is maybe the most annoying disadvantage when it comes to apply such a parametrization in the field of human motion prediction, since composition is a fundamental operator for forward kinematics.
 
 
-Euler representation: 
-A typical Euler rotation vector is a triplet that indicates the rotation around each axis in radians
-2 drawbacks: 
-- infinite number of representations for the same rotation
-- representation space to be discontinuous
+Now we have enough material to justify quaternions in the context of human motion modeling. Analogously to exponential maps, quaternions describe a 3D rotation with an angle $\theta$ and an axis $\hat{e}$. A rotation of $\theta$ radians around an axis $\hat{e}$ is encoded as a = $cos(\theta/2)$ and $bcd = \hat{e}\sin(\theta/2)$. This representation has multiple features that help it overcome the above mentioned limitations of the alternatives. I'll summarize its advantages in the following list: 
+- No singularities: each rotation is uniquely identified with a quaternion representation.
+- No discontinuities in the parameter space: this is particularly useful when regressing on rotations.
+- Fully composable  : in the quaternions domain rotations can be composed and used to compute transformations.
+- Interpolation: quaternions are also surprisingly handy to perform interpolation between rotations.
+- Numerical stability: last but not least, quaternion based parametrization schemes are numerically stable, and are more computationally efficient than other representations.
 
-Axis angle representation: 
-exponential map, this representation again uses 3 parameters and is proposed as a more practical alternative to Euler angles. Intuitively, an axis-angle rotation is described by an axis e and a rotation angle θ around this axis.
-2 disadvantages: 
-- Discontinuity
-- No way to compose rotations: Composition is a fundamental operator for forward kinematics
+So far so good. Unfortunately, quaternions have disadvantages too. The main issue when quaternions arises from the so-called *antipodal representations*: two opposite quaternions $q$ and $-q$ describe the same 3D rotation. Nevertheless, this dual parametrization represents improvement over the infinite set of equivalent representations in the Euler angles and exponential maps space.
 
-
-#### Convolutional networks
-Compared to RNNs, convolutional networks have a
-number of advantages. First, they are more efficient on modern hardware, second less likely to suffer under exploding or vanishing gradients such as RNNs. 
-in practice they tend to focus on local dependencies rather than long-term relationships. In convolutional models, the receptive field can be drastically increased through dilated convolutions. 
-
-Architecture is an adaptation of its RNN-based counterpart, in which we replace the backbone (GRU and linear layers, yellow block in Figure 1) with a sequence of convolutional layers.
-
-+an exponentially increasing dilation factor
-
-
-
-
-### Similarities with previous works 
-
-#### Autoregressive model 
-at each time step, the model takes as input the previous recurrent state as well as features describing the previous pose in order to predict the next pose.
-
-#### GRUs
-we selected GRU for their simplicity and efficiency. In line with the findings of Chung et al. (2014), we found no benefit in using long short-term memory (LSTM), which require learning extra gates.
-
-#### Residual connections 
-We take inspiration from residual connections applied to Euler angles (Martinez et al., 2017), where the model does not predict absolute angles but angle deltas and integrates them over time. For quaternions, the predicted deltas are applied to the input quaternions through quaternion product (Shoemake, 1985) (QMul block in Figure 1). Similar to Martinez et al. (2017), we found this approach to be beneficial for short-term prediction, but we also discovered that it leads to instability for long-term generation.
-
+This was it for quaternions, now let's proceed with the next paper. 
 <br>
 <br>
+
 
 
 ### Adversarial Geometry-Aware Human Motion Prediction
 by Liang-Yan Gui, Yu-Xiong Wang, Xiaodan Liang, and Jos´e M. F. Moura<br>
  
+Finally we discuss one of the most influential and successful papers on human motion prediction. The *Adversarial Geometry-Aware Encoder-Decoder*  model (abbreviated *AGED*) reached SOTA results at the time of publication. The approach proposed in this paper builds mainly upon the work of Martinez et al., enriching the solution with the surprisingly powerful adversarial framework. 
 
 # The architecture 
 
