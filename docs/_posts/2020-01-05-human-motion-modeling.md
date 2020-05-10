@@ -259,7 +259,7 @@ This was it for quaternions, now let's proceed with the next paper.
 by Liang-Yan Gui, Yu-Xiong Wang, Xiaodan Liang, and Jos´e M. F. Moura<br>
  
 Finally we discuss one of the most influential and successful papers on human motion prediction. The *Adversarial Geometry-Aware Encoder-Decoder*  model (abbreviated *AGED*) reached SOTA results at the time of publication. The approach proposed in this paper builds mainly upon the work of Martinez et al., enriching the solution with the surprisingly powerful adversarial framework. <br>
-Although this work markedly outperformed the previous approaches its contribution is limited to the loss definition problem. The authors tackled both the frame-level and sequence-level loss. This remarkable result sheds a light on the already-known-to-be fundamental role of the loss in machine learning problems. 
+Although this work markedly outperformed the previous approaches its contribution can be seen as limited to the loss definition problem. The authors tackled both the frame-level and sequence-level loss. This remarkable result sheds a light on the already-known-to-be fundamental role of the loss in machine learning problems. 
 
 # The architecture 
 
@@ -270,7 +270,7 @@ Although this work markedly outperformed the previous approaches its contributio
 I have to admit that at first sight the architecture design might seem complicated. However, as you'll soon discover by yourself, the idea is easy to grasp and also makes a lot of sense. 
 
 In every adversarial framework there must be *generator* and a *discriminator*. <br>
-As a generator the authors use an auto-encoder similar to the one discussed in Martinez et al. The network is trained to minimize the *Geodesic distance* between prediction and ground-truth at the frame level. In the next section I'll discuss the meaning of this specific distance, for now just think of it as an alternative to the more familiar Euclidean distance. The encoder will learn to extract a lower dimensional representation of the input sequence, while the decoder will learn to produce a prediction given a seed motion frame and the encoded version of the input. <br>
+As a generator the authors use an auto-encoder similar to the one discussed in Martinez et al. The network is trained to minimize the *Geodesic distance* between prediction and ground-truth at the frame level. In the next section I'll discuss the meaning of this specific distance, for now just think of it as an alternative to the more familiar Euclidean distance. The encoder will learn to extract a lower dimensional representation of the input sequence, while the decoder will learn to produce a prediction given a seed motion frame and the encoded version of the input. Again following Martinez et al.'s footsteps the authors make use of residual connections in the decoder architecture. <br>
 As you can see from the above schema, the model comprises two different discriminators: a *fidelity discriminator* and a *continuity discriminator* (I'll later explain the motivation behind these two names). Both discriminators are recurrent networks, with a dense head on top to produce a binary output. 
 
 
@@ -278,45 +278,36 @@ As you can see from the above schema, the model comprises two different discrimi
 
 #### A geodesic loss
 The idea is to find a distance measure that is specific to rotations. The Euclidean measure treats the rotation coordinates as ordinary points in a 3D space. Rotations implicitly encode geometric information which should not be discarded when computing the loss. <br>
-The Geodesic distance measures the *shortest path between two rotations*, and hence is able to capture the inherent geometric structure of rotations. Such a geometrically more meaningful loss leads to more precise distance measurement, with the advantage of being computationally inexpensive. 
+The Geodesic distance measures the *shortest path between two rotations*, and is hence able to capture the inherent geometric structure of rotations. Such a geometrically more meaningful loss leads to more precise distance measurement, with the advantage of being computationally inexpensive. 
 
-An interesting note is that the geodesic distance *"it's fully equivalent to the quaternion based metric"*. However, computationally speaking, the authors claim that "experimental results" indicate that *"the quaternion based metric led to worse results, possibly due to the need for renormalization of quaternions during optimization"*. 
+Interestingly enough, the geodesic distance *"it's fully equivalent to the quaternion based metric"*. However, computationally speaking, the authors claim that "experimental results" indicate that *"the quaternion based metric led to worse results, possibly due to the need for renormalization of quaternions during optimization"*. 
 
 #### A sequence-level loss
-The issue here is the same that Ghosh et al. addressed with their metric for *naturalness*. As I anticipated in the introduction, it's hard to evaluate quantitatively the quality of the predictions. However, it's fairly easy to argue that a measure of *"plausibility"* is ultimately a necessary ingredient in a network whose goal is to generate *"good-looking"* sequences. Using the authors' argument: 
+The issue that's being tackled here is the same that Ghosh et al. addressed with their metric for *naturalness*. As I anticipated in the introduction, it's hard to evaluate quantitatively the quality of the predictions. However, it's fairly easy to argue that a measure of *"plausibility"* is ultimately a necessary ingredient in a network whose goal is to generate *"good-looking"* sequences. Using the authors' argument: 
 > This is partially because using a frame-wise regression loss solely cannot check the fidelity of the entire predicted sequence from a global perspective.
 
-They're solution is similar in spirit to that of Ghosh et al., in the sense that both avoided the hard problem of explicitly defining such a measure by teaching an additional network to take the part of the critic. While Ghosh et al. ended up connecting the two networks in a collaborative fashion, here Gui et al. adopted an adversarial approach, forcing the generator and the two discriminators to challenge each other. 
+Their solution is similar in spirit to that of Ghosh et al., in the sense that both avoided the hard problem of explicitly defining such a measure by instead training an additional network to play the part of the critic. The differences between the two approaches stems from the way the two model's components were connected. While Ghosh et al. ended up pipelining the two networks in a collaborative fashion, here Gui et al. adopted an adversarial approach, forcing the generator and the two discriminators to compete against each other. 
 
 Let's first talk about the *fidelity discriminator*. <br>
 This component is fed ground truth and generated sequences in an alternating fashion, and it's trained to correctly identify *original* and *fake* inputs. The idea is that such a discriminator should be able to examine whether the generated motion sequence is *human-like and plausible overall*. <br>
 Now to the *continuity discriminator*. <br>
-This second network is given as input the concatenation of the conditioning sequence (the frames based on which the generator makes a prediction) and the true and fake future frames, again in an alternating fashion. The continuity discriminator hence gets to observe the motion from the beginning at time step $0$ until the very end at time step $T_1 + T_2$, where $T_1$ is the length of the input and $T_2$ is the desired length of the output. Intuitively, the continuity discriminator should learn to check whether the predicted motion sequence is *coherent with the input sequence without a noticeable discontinuity between them*.
+This second network is given as input the concatenation of the conditioning sequence (the frames based on which the generator makes a prediction) and the true and fake future frames, again in an alternating fashion. The continuity discriminator hence gets to observe the motion from the beginning at time step $0$ until the very end at time step $T_1 + T_2$, where $T_1$ is the length of the input and $T_2$ is the desired length of the output, while the fidelity discriminator only receives the frames from time step $T_1$ to $T_2$.<br> Intuitively, being trained on this extended version of the sequence, the continuity discriminator should learn to check whether the predicted motion sequence is *coherent with the input sequence without a noticeable discontinuity between them*.
 
-Given this two discriminators, the quality of the predictions can be judged from an overall perspective by evaluating how well the generator fools the two networks.
+The idea should be evident by now: the quality of the predictions from an overall perspective can be assessed by indirectly looking at the two discriminators. The better the generator is at fooling the two adversaries, the more *human-like* and *coherent* the predicted frames should seem to a human.
 
-
-- Residual connections 
-- Ground truth one hot labels
-- frame level Geodesic loss 
-- Our entire model thus consists of a single predictor and two discriminators
--We integrate the geodesic (regression) loss and the two adversarial losses, and obtain the optimal predictor by jointly optimizing the following minimax objective function: P∗ = argmin
-max λ Lf P Df ,Dc  adv (P, Df) + Lc adv (P, Dc) + Lgeo (P) 
-
-
-### Similarities with previous works 
-
-#### Martinez architecture for predictor
-
-#### Residual connections for smoothness
-
-
-
+We can finally put together everything we've learned so far and look at the objective of the model, which is obtained by integrating the geodesic loss and the two adversarial losses: <br>
+<div align="center">
+$$ P^* = arg \; min_{P} \;  \{\;max_{D_f, D_c} \; \lambda\{\; L_{adv}(P,D_f) + L_{adv}(P,D_c)\; \} + L_{geo}(P)\;\}$$ 
+</div>
 <br>
 <br>
 
 ### Learning Trajectory Dependencies for Human Motion Prediction
 by Wei Mao, Miaomiao Liu, Mathieu Salzmann, Hongdong Li<br>
+
+This is probably the most groundbreaking and innovational paper of the series. In my opinion, not only the authors managed to contribute to the scientific discourse with a smart and successful solution, but also and above all they introduced a drastically different way of framing the problem, effectively opening new directions to the future developments on the topic of human motion prediction. 
+
+The scientific community usually tends to spiral around the most promising approach, rarely focusing on alternatives. I hence consider most praiseworthy (and essential) the research that is able to jump off the leading train to embrace a yet unexplored and much less favorable path. 
 
 
 # The architecture 
@@ -348,16 +339,10 @@ To make use of the DCT representation, instead of treating motion prediction as 
 
 #### Learned graph representation of the human body 
 spatial dependency of human pose is encoded by treating a human pose as a generic graph (rather than a human skeletal kinematic tree) formed by links between every pair of body joints. Instead of using a pre-defined graph structure, we design a new graph convolutional network to learn graph connectivity automatically. This allows the network to capture long range dependencies beyond that of human kinematic tree.
-
-
-
-
-### Similarities with previous works 
-
-
-
 <br>
 <br>
+
+
 
 ### Structured Prediction Helps 3D Human Motion Modelling
 by Emre Aksan,Manuel Kaufmann, Otmar Hilliges<br>
@@ -410,12 +395,9 @@ We additionally propose to perform a similar decomposition in the objective func
 <br>
 
 
-### Similarities with previous works 
-<br>
-<br>
 
-# Further reading 
-Structural-rnn: Deep learning on spatiotemporal graphs. 
+## Conclusion
+
 
 
 
