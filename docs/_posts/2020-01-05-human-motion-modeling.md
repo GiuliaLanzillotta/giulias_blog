@@ -152,7 +152,7 @@ In this paper Ghosh et al. give up on directly producing a correct prediction an
 # The architecture 
 
 <div align="center">
-<img src ="{{site.baseurl}}/assets/images/Ghosh.png/" alt="The architecture" width="500" align="center"/>
+<img src ="{{site.baseurl}}/assets/images/Ghosh2.png/" alt="The architecture" width="500" align="center"/>
 <br>
 <br>
 <i>Figure 1 from the paper.</i></div>
