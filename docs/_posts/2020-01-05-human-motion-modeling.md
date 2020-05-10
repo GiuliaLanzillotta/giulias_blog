@@ -383,7 +383,7 @@ First, the proposed factorization allows for integration of a structural prior i
 Because the per-joint decomposition leads to many small separate networks, we can think of an SP-layer as a dense layer where some connections have been set to zero explicitly by leveraging domain knowledge
 
 <div align="center">
-<img src="{{site.baseurl}}/assets/images/Aksan.png" width="500"/>
+<img src={{site.baseurl}}/assets/images/Aksan.png width="500"/>
 </div>
 <div align="center"><i>Figure 2 from the paper.</i></div>
 
