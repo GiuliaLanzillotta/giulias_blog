@@ -78,11 +78,11 @@ On the other hang long-term tasks are often referred to as generation tasks and 
 
 ## The papers 
 ----
-
+<br>
 It's finally time to dive into some of the most insightful deep-learning approaches in the history of the topic. In this section I am going to discuss 6 selected papers, focusing on their main contributions to the field. <br> 
 
 <div align="center">
-<img src="https://media1.tenor.com/images/b6d83d66859b0cf095ef81120ef98e1f/tenor.gif?itemid=5531028"/>
+<img src="https://media.giphy.com/media/3owzVVlSXEXpScinio/giphy.gif"/>
 </div>
 
 <br>
@@ -152,7 +152,7 @@ In this paper Ghosh et al. give up on directly producing a correct prediction an
 # The architecture 
 
 <div align="center">
-<img src ="{{site.baseurl}}/assets/images/Ghosh2.png/" alt="The architecture" width="500" align="center"/>
+<img src ="{{site.baseurl}}/assets/images/Ghosh2.png" alt="The architecture" width="500" align="center"/>
 <br>
 <br>
 <i>Figure 1 from the paper.</i></div>
@@ -206,7 +206,6 @@ This paper extensively explores the weaknesses of the available representations 
 
 I will not discuss the architecture for this paper because I believe that the main source of innovation here is in the in-depth analysis of the representation problem.
 <br>
-<br>
 
 
 # Quaternions?
@@ -218,7 +217,7 @@ Quaternions are generally represented in the form $a + bi + cj + dk$, where $a, 
 <br>
 
 <div align="center">
-<img src="https://media.giphy.com/media/zjQrmdlR9ZCM/giphy.gif" width="500"/>
+<img src="https://media.giphy.com/media/3ohuPb4INXDHMbqtPi/giphy.gif" width="500"/>
 </div>
 <br> 
 
@@ -304,17 +303,48 @@ $$ P^* = arg \; min_{P} \;  \{\;max_{D_f, D_c} \; \lambda\{\; L_{adv}(P,D_f) + L
 
 ### Learning Trajectory Dependencies for Human Motion Prediction
 by Wei Mao, Miaomiao Liu, Mathieu Salzmann, Hongdong Li<br>
+<br>
 
 This is probably the most groundbreaking and innovational paper of the series. In my opinion, not only the authors managed to contribute to the scientific discourse with a smart and successful solution, but also and above all they introduced a drastically different way of framing the problem, effectively opening new directions to the future developments on the topic of human motion prediction. 
 
-The scientific community usually tends to spiral around the most promising approach, rarely focusing on alternatives. I hence consider most praiseworthy (and essential) the research that is able to jump off the leading train to embrace a yet unexplored and much less favorable path. 
+The scientific community usually tends to spiral around the most promising approach, rarely focusing on alternatives. I hence consider praiseworthy (and essential) the research that is able to jump off the leading train to embrace a yet unexplored and much less favorable path. 
+
+Now enough with the compliments, let's dive into the paper.
+
+<br>
+<div align="center">
+<img src="https://media.giphy.com/media/l1AsElwgf3qkDOotW/giphy.gif" width="500"/>
+</div>
+<br>
+<br>
+
+To understand the solution proposed here we first need to take a step back and do a brief recap of the problem.<br>
+As stated in the introduction section, human motion modeling is about predicting $T_2$ future motion frames, given $T_1$ past frames as input. At each time-step we get to observe either the absolute position or the relative rotation of each modeled joint. Taking a step further, looking at each joint separately we would observe its movement over time. <br>
+Centuries of signal processing math tell us that any sequence in the time domain can be analysed as well in the frequency domain by accessing its spectrum. To the beauty of this dualism contributes the fact that the two representations are exactly equivalent, i.e. there is no loss of information in going from one to another.<br>
+Hypothetically speaking then it should be possible to take the signal that each joint traces through its movements and move it to the frequency domain to evaluate its spectrum. <br>
+In this paper Mao et al. experiment with precisely this idea: flipping over the perspective by looking at the joints' frequencies instead of the joints' positions. 
+<br>
+<br>
+
+
 
 
 # The architecture 
 
+
 ![The architecture]({{site.baseurl}}/assets/images/Mao.png )
 <div align="center"><i>Figure 2 from the paper.</i></div>
 <br>
+
+
+Please use a minute to take a rough picture in your mind of what this single joint data might look like in a simple rotations-time plot. 
+
+  each joint traces a signal over time through the sequences of its rotations, which, if we were to plot it would look like a series of consecutive points in the time-rotations plane. 
+
+If we were to look at each joint separately the input would consist in a sequence of position 
+- The data is a time series!
+
+
 It consists of 12 residual blocks, each of which comprises 2 graph convolutional layers and two additional graph convolutional layers
 
 
