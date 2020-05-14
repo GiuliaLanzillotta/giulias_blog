@@ -318,9 +318,11 @@ Now enough with the compliments, let's dive into the paper.
 <br>
 <br>
 
-To understand the solution proposed here we first need to take a step back and do a brief recap of the problem.<br>
+To understand the solution proposed here we first need to take a step back and do a brief recap of the problem.
+
 As stated in the introduction section, human motion modeling is about predicting $T_2$ future motion frames, given $T_1$ past frames as input. At each time-step we get to observe either the absolute position or the relative rotation of each modeled joint. Taking a step further, looking at each joint separately we would observe its movement over time. <br>
-Centuries of signal processing math tell us that any sequence in the time domain can be analysed as well in the frequency domain by accessing its spectrum. To the beauty of this dualism contributes the fact that the two representations are exactly equivalent, i.e. there is no loss of information in going from one to another.<br>
+Centuries of signal processing math tell us that any sequence in the time domain can be analysed as well in the frequency domain by accessing its *spectrum*. For those not familiar with these concepts, you can think of the frequency of a signal as an indicator of the rapidity of changes in it. To the beauty of this dualism contributes the fact that the two representations are exactly equivalent, i.e. there is no loss of information in going from one to another.
+
 Hypothetically speaking then it should be possible to take the signal that each joint traces through its movements and move it to the frequency domain to evaluate its spectrum. <br>
 In this paper Mao et al. experiment with precisely this idea: flipping over the perspective by looking at the joints' frequencies instead of the joints' positions. 
 <br>
@@ -336,16 +338,11 @@ In this paper Mao et al. experiment with precisely this idea: flipping over the 
 <div align="center"><i>Figure 2 from the paper.</i></div>
 <br>
 
+The model discussed in this work builds upon techniques that we have not yet encountered.
 
-Please use a minute to take a rough picture in your mind of what this single joint data might look like in a simple rotations-time plot. 
+As depicted in the architecture's scheme above, the signal is first passed through the *Discrete Cosine Transform* (DCT) block: this is where the perspective is *flipped*, i.e. where we compute the spectrum for each single joint. The spectrum consists in a series of coefficients, identifying the principal frequencies in the input signal (more on this in the next section). Once in the frequency domain, the problem of human motion prediction becomes that of predicting the *DCT coefficients* of the true future sequence. To get our predictions back in the time domain at the end of the pipeline we pass the predicted coefficients trough an *Inverse Discrete Cosine Transform* block (IDCT as visible in the scheme). 
 
-  each joint traces a signal over time through the sequences of its rotations, which, if we were to plot it would look like a series of consecutive points in the time-rotations plane. 
-
-If we were to look at each joint separately the input would consist in a sequence of position 
-- The data is a time series!
-
-
-It consists of 12 residual blocks, each of which comprises 2 graph convolutional layers and two additional graph convolutional layers
+Once defined the two pipeline endpoints, DCT and its inverse, what is left to do is to look at what's in between. To generate predictions in the frequency domain the authors resorted to the use of *residual connections* and *graph convolutional networks*. More precisely, these middle layers consist of 12 residual blocks, each of which comprises 2 graph convolutional layers and two additional graph convolutional layers.
 
 
 - DCT temporal encoding.
