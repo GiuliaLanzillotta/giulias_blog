@@ -305,26 +305,12 @@ $$ P^* = arg \; min_{P} \;  \{\;max_{D_f, D_c} \; \lambda\{\; L_{adv}(P,D_f) + L
 by Wei Mao, Miaomiao Liu, Mathieu Salzmann, Hongdong Li<br>
 <br>
 
-This is probably the most groundbreaking and innovational paper of the series. In my opinion, not only the authors managed to contribute to the scientific discourse with a smart and successful solution, but also and above all they introduced a drastically different way of framing the problem, effectively opening new directions to the future developments on the topic of human motion prediction. 
-
-The scientific community usually tends to spiral around the most promising approach, rarely focusing on alternatives. I hence consider praiseworthy (and essential) the research that is able to jump off the leading train to embrace a yet unexplored and much less favorable path. 
-
-Now enough with the compliments, let's dive into the paper.
-
-<br>
-<div align="center">
-<img src="https://media.giphy.com/media/l1AsElwgf3qkDOotW/giphy.gif" width="500"/>
-</div>
-<br>
-<br>
-
 To understand the solution proposed here we first need to take a step back and do a brief recap of the problem.
 
-As stated in the introduction section, human motion modeling is about predicting $T_2$ future motion frames, given $T_1$ past frames as input. At each time-step we get to observe either the absolute position or the relative rotation of each modeled joint. Taking a step further, looking at each joint separately we would observe its movement over time. <br>
+As stated in the introduction section, human motion modeling is about predicting $T_2$ future motion frames, given $T_1$ past frames as input. At each time-step we get to observe either the absolute position or the relative rotation of each modeled joint. Taking a step further, looking at each joint separately we would observe its *trajectory*. <br>
 Centuries of signal processing math tell us that any sequence in the time domain can be analysed as well in the frequency domain by accessing its *spectrum*. For those not familiar with these concepts, you can think of the frequency of a signal as an indicator of the rapidity of changes in it. To the beauty of this dualism contributes the fact that the two representations are exactly equivalent, i.e. there is no loss of information in going from one to another.
 
-Hypothetically speaking then it should be possible to take the signal that each joint traces through its movements and move it to the frequency domain to evaluate its spectrum. <br>
-In this paper Mao et al. experiment with precisely this idea: flipping over the perspective by looking at the joints' frequencies instead of the joints' positions. 
+Hypothetically speaking then it should be possible to represent the movements of each joint in the frequency domain using its spectrum. In this paper Mao et al. experiment with precisely this idea: flipping over the perspective by looking at the joints' frequencies instead of the joints' positions. 
 <br>
 <br>
 
@@ -337,46 +323,57 @@ In this paper Mao et al. experiment with precisely this idea: flipping over the 
 ![The architecture]({{site.baseurl}}/assets/images/Mao.png )
 <div align="center"><i>Figure 2 from the paper.</i></div>
 <br>
+As depicted in the architecture's scheme above, the signal is first passed through the *Discrete Cosine Transform* (DCT) block: this is where the perspective is *flipped*, i.e. where we compute the spectrum for each single joint. The spectrum consists in a series of coefficients, identifying the principal frequencies in the input signal (more on this in the next section). To get our predictions back in the time domain we then pass the predicted coefficients trough an *Inverse Discrete Cosine Transform* block (IDCT as visible in the scheme) at the end of the pipeline. 
 
-The model discussed in this work builds upon techniques that we have not yet encountered.
-
-As depicted in the architecture's scheme above, the signal is first passed through the *Discrete Cosine Transform* (DCT) block: this is where the perspective is *flipped*, i.e. where we compute the spectrum for each single joint. The spectrum consists in a series of coefficients, identifying the principal frequencies in the input signal (more on this in the next section). Once in the frequency domain, the problem of human motion prediction becomes that of predicting the *DCT coefficients* of the true future sequence. To get our predictions back in the time domain at the end of the pipeline we pass the predicted coefficients trough an *Inverse Discrete Cosine Transform* block (IDCT as visible in the scheme). 
-
-Once defined the two pipeline endpoints, DCT and its inverse, what is left to do is to look at what's in between. To generate predictions in the frequency domain the authors resorted to the use of *residual connections* and *graph convolutional networks*. More precisely, these middle layers consist of 12 residual blocks, each of which comprises 2 graph convolutional layers and two additional graph convolutional layers.
-
-
-- DCT temporal encoding.
-given a temporal sequence X1:N, we first replicate the last pose, xN, T times to generate a temporal sequence of length N + T. We then compute the DCT coefficients of this sequence, and aim to predict those of the true future sequence X1:N+T. This naturally translates to estimating a residual vector in frequency space and was motivated by the zero-velocity baseline in [17]. we aim to learn the residuals
-between the input and output DCT representations.
-- Graph convolutional layer.
-Using a different learnable A for every graph convolutional layer allows the network to adapt the connectivity for different operations.
+To generate predictions in the frequency domain the authors resorted to the use of *residual connections* and *graph convolutional networks*. More precisely, these middle layers consist of 12 residual blocks, each of which comprises 2 graph convolutional layers, and two additional graph convolutional layers.<br>
+The use of residual connections should by now sound familiar: the authors admittedly drew inspiration from the work of Martinez et al., applying the *zero-velocity baseline* idea to the frequency space. <br>
+On the other hand, graph convolutional networks are pure novelty in the context of human motion prediction: the idea is to capture the spatial structure of the motion data by learning a graph representation for it. 
+<br>
+<br>
 
 
 # Take-away points
 
 #### A feed-forward approach 
-Here, instead, we propose to directly encode the temporal nature of human motion in our representation and work in trajectory space.
 
-Let us denote by
-x˜k =
-(xk,1, xk,2, xk,3, · · · , xk,N) the trajectory for the kth joint across N frames.
-we propose to adopt a trajectory representation based on the Discrete Cosine Transform (DCT). The main motivation behind this is that, by discarding the high frequencies, the DCT can provide a more compact representation, which nicely captures the smoothness of human motion, particularly in terms of 3D coordinates.
+Differently from all previous approaches, Mao et al. refrain from resorting to a sequential model by instead working in the *trajectory space* with a simple yet effective feed-forward model. As I mentioned previously, to encode the temporal nature of human motion the authors adopt a trajectory representation based on the Discrete Cosine Transform. 
+> Let us denote by $$x^k = x^{k}_1, x^{k}_2, x^{k}_3, ... , x^{k}_N$$ the trajectory for the $k$ th joint across $N$ frames. [...] <br>
+To make use of the DCT representation, instead of treating motion prediction as the problem of learning a mapping from $X_{1:N}$ to $X_{N+1:N+T}$, we reformulate it as one of learning a mapping between observed and future DCT coefficients. 
 
-To make use of the DCT representation, instead of treating motion prediction as the problem of learning a mapping from X1:N to XN+1:N+T, we reformulate it as one of learning a mapping between observed and future DCT coefficients
-
-#### Learned graph representation of the human body 
-spatial dependency of human pose is encoded by treating a human pose as a generic graph (rather than a human skeletal kinematic tree) formed by links between every pair of body joints. Instead of using a pre-defined graph structure, we design a new graph convolutional network to learn graph connectivity automatically. This allows the network to capture long range dependencies beyond that of human kinematic tree.
-<br>
+The data in the frequency domain undergoes  an additional *pre-processing* step, which turns out to be a smart (and easy to implement) solution to increase the quality of the predictions. The idea is simply to filter the spectrum of the signal by discarding the frequencies above a certain threshold, a well known concept in signal-processing called *low-pass filtering*. The main motivation behind this is that, by discarding the high frequencies, the DCT can nicely capture the smoothness of human motion.
 <br>
 
 
+#### Graph convolutions
+
+[Graph convolutions](https://tkipf.github.io/graph-convolutional-networks/) have first been proposed in [2016](https://arxiv.org/abs/1606.09375) and [2017](https://arxiv.org/abs/1609.02907). The idea is still in its early stages but it's nonetheless powerful. For those of you that are reading the term Graph Convolutional Networks (*GCN*) for the first time, you can think of it as a convolution operator that instead of working with raw vectors can be applied to graphs.<br>
+In this work, Mao et al. employ GCNs to treat the human pose as a generic graph (rather than a human skeletal kinematic tree) formed by links between every pair of body joints. Instead of using a pre-defined graph structure, the authors design a new graph convolutional network to learn graph connectivity automatically. This allows the network to capture long range dependencies beyond that of human kinematic tree.<br>
+Moreover, each of the GCN layers in the model has an independent structure. Using a different learnable adjacency matrix for every graph convolutional layer allows the network to adapt the connectivity for different operations.
+<br>
+
+
+#### The novelty 
+This is probably the most groundbreaking and innovational paper of the series. In my opinion, not only the authors managed to contribute to the scientific discourse with a smart and successful solution, but also and above all they introduced a drastically different way of framing the problem, effectively opening new directions to the future developments on the topic of human motion prediction. 
+
+The scientific community usually tends to spiral around the most promising approach, rarely focusing on alternatives. I hence consider praiseworthy (and essential) the research that is able to jump off the leading train to embrace a yet unexplored and much less favorable path. 
+<br>
+<br>
+<br>
 
 ### Structured Prediction Helps 3D Human Motion Modelling
-by Emre Aksan,Manuel Kaufmann, Otmar Hilliges<br>
-
-
+by Emre Aksan, Manuel Kaufmann, Otmar Hilliges
 <br>
-The proposed layer is agnostic to the underlying network and can be used with existing architectures for motion modelling
+
+We have finally reached the last of the six papers that I've selected for this discussion. <br>
+The contribution of this work does not revolve around a specific model, instead here Aksan et al. suggest a technique that can be incorporated by any of the approaches we've discussed so far. The experiments carried on by the authors show a marked improvement in the performance of existing models when adopting this technique.
+
+More specifically, the paper presents a new layer, that they call *Structured Prediction Layer* (*SPL*), which is agnostic to the underlying network. The SPL layer should work as a prior on the motion distribution, by successfully encoding spatial constraints in human motion modelling. 
+
+
+<div align="center">
+<img src="{{site.baseurl}}/assets/images/Aksan.png" width="500"/>
+</div>
+<div align="center"><i>Figure 2 from the paper.</i></div>
 
 
 # Take-away points
@@ -409,10 +406,6 @@ First, the proposed factorization allows for integration of a structural prior i
 
 Because the per-joint decomposition leads to many small separate networks, we can think of an SP-layer as a dense layer where some connections have been set to zero explicitly by leveraging domain knowledge
 
-<div align="center">
-<img src={{site.baseurl}}/assets/images/Aksan.png width="500"/>
-</div>
-<div align="center"><i>Figure 2 from the paper.</i></div>
 
 #### Per joint loss
 
