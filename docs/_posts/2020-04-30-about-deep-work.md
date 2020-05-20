@@ -50,6 +50,18 @@ The book is rich in concepts and is full of food for thought. However, in my opi
 What I've just claimed does not make reading about productivity a waste of time. I nonetheless believe Newport's concepts to be valuable and useful, and I've been experimenting with most of these ideas myself. <br>
 This seems a good point to start diving into the cool stuff in this book. 
 
+<br>
+<br>
+<div align="center">
+
+<img src="https://media.giphy.com/media/feN0YJbVs0fwA/giphy.gif" width="500"/>
+</div>
+<div align="center">Sorry, I am still working on this post.</div>
+<br>
+<br>
+<br>
+
+
 #### 1. Embrace boredom
 155
 165!

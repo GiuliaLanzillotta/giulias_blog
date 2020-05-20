@@ -360,31 +360,31 @@ The scientific community usually tends to spiral around the most promising appro
 <br>
 <br>
 
+
+
 ### Structured Prediction Helps 3D Human Motion Modelling
 by Emre Aksan, Manuel Kaufmann, Otmar Hilliges
 <br>
 
 We have finally reached the last of the six papers that I've selected for this discussion. <br>
-The contribution of this work does not revolve around a specific model, instead here Aksan et al. suggest a technique that can be incorporated by any of the approaches we've discussed so far. The experiments carried on by the authors show a marked improvement in the performance of existing models when adopting this technique.
+Do not expect to see a new architecture though, because the contribution of this work mainly revolves around a a novel *structured prediction layer* (*SPL*) that can be incorporated by any of the approaches we've discussed so far. The experiments carried on by the authors show a marked improvement in the performance of existing models when including the SPL layer.
 
-More specifically, the paper presents a new layer, that they call *Structured Prediction Layer* (*SPL*), which is agnostic to the underlying network. The SPL layer should work as a prior on the motion distribution, by successfully encoding spatial constraints in human motion modelling. 
+The idea behind the SPL layer is to model the structure of the human skeleton and hence the spatial dependencies between joints. The approach is motivated by the observation that human motion is strongly regulated by the spatial structure of the skeleton. <br>
+As it happens with any statistical tool, incorporating domain knowledge (usually in the form of priors) can drastically improve the model's performance - if the prior is correct. The hypothesis which is being addressed by the authors can be summarized as follows: 
 
+> Successfully exploiting spatial priors in human motion modelling can in turn allow recurrent models to capture temporal coherency more effectively.
 
 <div align="center">
 <img src="{{site.baseurl}}/assets/images/Aksan.png" width="500"/>
 </div>
 <div align="center"><i>Figure 2 from the paper.</i></div>
+<br>
 
 
-# Take-away points
 
-#### AMASS 
-A new dataset.
-The dataset contains 8593 sequences, which comprise a total of 9084918 frames sampled at 60 Hz. This is roughly equivalent to 42 hours of recording, making AMASS about 14 times bigger than H3.6M (632894 frames at 50 Hz).
+# A structure prediction layer  
 
-#### SPL 
-A structure prediction layer.
-successfully exploiting spatial priors in human motion modelling.
+The SP-layer models the structure of the human skeleton and hence the spatial dependencies between joints. This is achieved via a hierarchy of small-sized neural networks that are connected analogously to the kinematic chains of the human skeleton. Each node in the graph receives information about the parent node’s prediction and thus information is propagated along the kinematic chain. We furthermore introduce a joint-wise decomposition of the loss function as part of SPL
 
 xt ∈ RN is a concatenation of K joints x(k)
 xt = [x(hip) t
@@ -417,6 +417,7 @@ We additionally propose to perform a similar decomposition in the objective func
 
 
 ## Conclusion
+
 
 
 
