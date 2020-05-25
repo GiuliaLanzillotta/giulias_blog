@@ -38,15 +38,18 @@ Just *a quick note* before jumping into the interesting stuff: I am not going to
 ## Human motion prediction
 ---- 
 
-
-![Human motion data]({{site.baseurl}}/assets/images/hmp.png)
-<div align="center"><i>Figure taken from Martinez et al.</i></div>
 <br>
-
 One of the best ways to introduce a problem, in my opinion, is to talk about the available data. <br>
 No machine learning problem can exist without data. 
-<br> 
-<br> 
+<br>
+<div align="center">
+<img src="{{site.baseurl}}/assets/images/HuMMo.png" width="500"/>
+<img src="{{site.baseurl}}/assets/images/HuMMo2.png" width="450"/>
+</div>
+<div align="center"><i>Figure taken from Aksan et al.</i></div>
+<br>
+<br>
+
 
 #### The H3.6M dataset
 [Human 3.6M](http://mocap.cs.cmu.edu/) (H3.6M) is a large-scale publicly available dataset including 3.6 million 3D motion-caption (abbreviated to mocap) data. 
@@ -79,18 +82,21 @@ On the other hang long-term tasks are often referred to as generation tasks and 
 ## The papers 
 ----
 <br>
-It's finally time to dive into some of the most insightful deep-learning approaches in the history of the topic. In this section I am going to discuss 6 selected papers, focusing on their main contributions to the field. <br> 
-
 <div align="center">
-<img src="https://media.giphy.com/media/3owzVVlSXEXpScinio/giphy.gif"/>
+<img src="{{site.baseurl}}/assets/images/hmp.png" />
 </div>
+<div align="center"><i>Figure taken from Martinez et al.</i></div>
+<br>
 
+
+It's finally time to dive into some of the most insightful deep-learning approaches in the history of the topic. In this section I am going to discuss 6 selected papers, focusing on their main contributions to the field. <br> 
 <br>
 <br>
 
 
-### On human motion prediction using recurrent neural networks
-by Julieta Martinez, Michael J. Black, and Javier Romero. <br>
+##  #1 : On human motion prediction using recurrent neural networks
+
+**by Julieta Martinez, Michael J. Black, and Javier Romero.**<br>
 
 
 I enjoyed reading this paper: the authors proposed many (though not too many) interesting ideas, that are clearly justified by a critical analysis of those that were state-of-the-art models in 2017. Too easily the scientific discourse can spiral down a dead-end, dragged by its own weight. Papers that can stir the discourse attention into a new direction, like this one, are necessary to its very progress.
@@ -140,8 +146,9 @@ And to model velocity they propose a residual architecture, obtained by simply a
 <br>
 
 
-### Learning Human Motion Models for Long-term Predictions
-by Partha Ghosh, Jie Song, Emre Aksan, Otmar Hilliges<br>
+## #2 :  Learning Human Motion Models for Long-term Predictions
+
+**by Partha Ghosh, Jie Song, Emre Aksan, Otmar Hilliges**<br>
 
 
 A fundamental issue that needs to be tackled when working with Human motion is that of constraining the prediction to a feasible subset of the output space. The *skeletal constraints* to human motion restrict the set of possible poses to a limited set. The problem arises when you need to force the predictions of your network into this subset.<br>
@@ -196,8 +203,9 @@ The method described in this paper has two main contact points with Martinez et 
 <br>
 
 
-### Modeling Human Motion with Quaternion-based Neural Networks
-by Dario Pavllo, Christoph Feichtenhofer, Michael Auli, David Grangier<br>
+## #3 : Modeling Human Motion with Quaternion-based Neural Networks
+
+**by Dario Pavllo, Christoph Feichtenhofer, Michael Auli, David Grangier**<br>
 
 
 
@@ -254,8 +262,9 @@ This was it for quaternions, now let's proceed with the next paper.
 
 
 
-### Adversarial Geometry-Aware Human Motion Prediction
-by Liang-Yan Gui, Yu-Xiong Wang, Xiaodan Liang, and Jos´e M. F. Moura<br>
+## #4: Adversarial Geometry-Aware Human Motion Prediction
+
+**by Liang-Yan Gui, Yu-Xiong Wang, Xiaodan Liang, and Jos´e M. F. Moura**<br>
  
 Finally we discuss one of the most influential and successful papers on human motion prediction. The *Adversarial Geometry-Aware Encoder-Decoder*  model (abbreviated *AGED*) reached SOTA results at the time of publication. The approach proposed in this paper builds mainly upon the work of Martinez et al., enriching the solution with the surprisingly powerful adversarial framework. <br>
 Although this work markedly outperformed the previous approaches its contribution can be seen as limited to the loss definition problem. The authors tackled both the frame-level and sequence-level loss. This remarkable result sheds a light on the already-known-to-be fundamental role of the loss in machine learning problems. 
@@ -301,8 +310,9 @@ $$ P^* = arg \; min_{P} \;  \{\;max_{D_f, D_c} \; \lambda\{\; L_{adv}(P,D_f) + L
 <br>
 <br>
 
-### Learning Trajectory Dependencies for Human Motion Prediction
-by Wei Mao, Miaomiao Liu, Mathieu Salzmann, Hongdong Li<br>
+## #5 : Learning Trajectory Dependencies for Human Motion Prediction
+
+**by Wei Mao, Miaomiao Liu, Mathieu Salzmann, Hongdong Li**<br>
 <br>
 
 To understand the solution proposed here we first need to take a step back and do a brief recap of the problem.
@@ -362,20 +372,21 @@ The scientific community usually tends to spiral around the most promising appro
 
 
 
-### Structured Prediction Helps 3D Human Motion Modelling
-by Emre Aksan, Manuel Kaufmann, Otmar Hilliges
+## #6 : Structured Prediction Helps 3D Human Motion Modelling
+
+**by Emre Aksan, Manuel Kaufmann, Otmar Hilliges**
 <br>
 
 We have finally reached the last of the six papers that I've selected for this discussion. <br>
-Do not expect to see a new architecture though, because the contribution of this work mainly revolves around a a novel *structured prediction layer* (*SPL*) that can be incorporated by any of the approaches we've discussed so far. The experiments carried on by the authors show a marked improvement in the performance of existing models when including the SPL layer.
+Do not expect to see a new architecture though, because the contribution of this work mainly revolves around a a novel *structured prediction layer* (*SPL*) that can be incorporated by any of the approaches we've discussed so far. The experiments carried on by the authors show a marked improvement in the performance of existing models when including the SP-layer.
 
-The idea behind the SPL layer is to model the structure of the human skeleton and hence the spatial dependencies between joints. The approach is motivated by the observation that human motion is strongly regulated by the spatial structure of the skeleton. <br>
-As it happens with any statistical tool, incorporating domain knowledge (usually in the form of priors) can drastically improve the model's performance - if the prior is correct. The hypothesis which is being addressed by the authors can be summarized as follows: 
+The idea behind the SP-layer is to model the structure of the human skeleton and hence the spatial dependencies between joints. The approach is motivated by the observation that human motion is strongly regulated by the spatial structure of the skeleton. <br>
+As it happens with any statistical tool, incorporating domain knowledge (usually in the form of priors) can drastically improve the model's performance - if the prior is correct. The hypothesis which is being addressed by the authors can hence be summarized as follows: 
 
 > Successfully exploiting spatial priors in human motion modelling can in turn allow recurrent models to capture temporal coherency more effectively.
 
 <div align="center">
-<img src="{{site.baseurl}}/assets/images/Aksan.png" width="500"/>
+<img src="{{site.baseurl}}/assets/images/Aksan.png" width="600"/>
 </div>
 <div align="center"><i>Figure 2 from the paper.</i></div>
 <br>
@@ -384,39 +395,65 @@ As it happens with any statistical tool, incorporating domain knowledge (usually
 
 # A structure prediction layer  
 
-The SP-layer models the structure of the human skeleton and hence the spatial dependencies between joints. This is achieved via a hierarchy of small-sized neural networks that are connected analogously to the kinematic chains of the human skeleton. Each node in the graph receives information about the parent node’s prediction and thus information is propagated along the kinematic chain. We furthermore introduce a joint-wise decomposition of the loss function as part of SPL
+The SP-layer models the the spatial dependencies between joints via a hierarchy of small-sized neural networks that are connected analogously to the kinematic chains of the human skeleton. Each node in the graph receives information about the parent node’s prediction and thus information is propagated along the kinematic chain.<br>
 
-xt ∈ RN is a concatenation of K joints x(k)
-xt = [x(hip) t
-t ∈ RM: , x(spine)
-t . . . x(lwrist) t , x(lhand) t ]
+The figure above shows the internal structure of the SP-layer.<br>
+The input $h_t$ is a generic context representation, i.e. a vector which is assumed to summarize the motion sequence until time $t$. While the previously discussed architectures leverage several dense layers to predict the whole $N$-dimensional pose vector $x_t$ given $h_t$, the SP-layer predicts each joint individually with separate smaller networks. 
+Because the per-joint decomposition leads to many small separate networks, we can think of an SP-layer as a dense layer where some connections have been set to zero explicitly by leveraging domain knowledge. <br>
+Formally speaking, the above scheme defines a Bayesian network over the joints positions from which we can extract a factorized version of the "joint distribution" via the *chain rule*, i.e. : 
 
-the SP-layer takes
-a context representation ht as input. Here, ht is assumed to summarize the motion sequence until time t. Without loss of generality, we assume this to be a hidden RNN state or its projection. 
-While existing work typically leverages several dense layers to predict the N-dimensional pose vector xt from ht, our SP-layer predicts each joint individually with separate smaller networks:
+$$ p_\theta(x_t)  = \prod_{k=1}^{K} p_\theta(\, x_t^{(k)} \, | \; parent \;(x_t^{(k)}), \,h_t) $$ 
 
-pθ(xt) =K k=1
-pθ(x(k) t | parent(x(k) t ), ht)
+Note that each sub-layer is receiving as input both the parents' predictions and the context vector. In this formulation each joint receives information about its own configuration and that of the immediate parent both explicitly, through the conditioning on the parent joint’s prediction, and implicitly via the context.<br>
 
-pθ(xt) = pθ(x(hip) t | ht)pθ(x(spine) t | x(hip) t , ht) · · ·
-
-In this formulation each joint receives information about its own configuration and that of the immediate parent both explicitly, through the conditioning on the parent joint’s prediction, and implicitly via the context ht
-
-First, the proposed factorization allows for integration of a structural prior in the form of a hierarchical architecture where each joint is modelled by a different network. This allows the model to learn dedicated representations per joint and hence saves model capacity.
-
-Because the per-joint decomposition leads to many small separate networks, we can think of an SP-layer as a dense layer where some connections have been set to zero explicitly by leveraging domain knowledge
+As an example, unrolling the above equation with respect to the scheme shown above we would get something along the line: 
 
 
-#### Per joint loss
+$$ p_\theta(x_t)  = p_\theta(\, x_t^{(hip)} \, | \,h_t)\,p_\theta(\, x_t^{(spine)} \, |\, x_t^{(hip)}, \,h_t\,)\, ... $$ 
 
-We additionally propose to perform a similar decomposition in the objective function that leads to further improvements
+<br>
+The benefit of this structured prediction approach is twofold.
+  - **Saving model capacity**: the proposed factorization allows for integration of a structural prior in the form of a hierarchical architecture where each joint is modelled by a different network. This allows the model to learn dedicated representations per joint and hence saves model capacity.
+  - **Increasing precision**: analogous to message passing, each parent propagates its prediction to the child joints, allowing for more precise local predictions because the joint has access to the information it depends on (i.e., the parent’s prediction).
 
-
+Additionally, the authors propose a similar decomposition in the objective function, giving birth to a new *per joint loss*. Instead of calculating the error on every frame and then summing over the time steps in the sequence, Aksan et al. directly calculate the error on each joint separately, summing the results across both temporal and spatial domain.<br> 
+As we've got to see through the previous works, the loss is an extensively discussed topic in the context of human motion prediction, since its definition can sensibly influence the outcome of an experiment.
+<br>
+<br> 
 <br>
 
 
 
-## Conclusion
+## The end
+---
+<br>
+This is it for today: our journey through human motion prediction stops here. <br>
+Nonetheless, the topic continues to evolve as the ability of interacting with complex human environment is perceived as essential by an increasing number of applications. 
+<br>
+<br>
+Here's a beautiful quote that I'd like to end this discussion with: 
+> ### Any sufficiently advanced technology is indistinguishable from magic.<br>
+
+― Arthur C. Clarke, Profiles of the Future: An Inquiry Into the Limits of the Possible
+
+<br>
+
+#### References
+If you want to continue the journey on your own here are some links that you might find useful: 
+
+[1] Martinez et al. (2017) [On Human Motion Prediction Using Recurrent Neural Networks](http://openaccess.thecvf.com/content_cvpr_2017/papers/Martinez_On_Human_Motion_CVPR_2017_paper.pdf)
+
+[2] Ghosh et al. (2017) [Learning Human Motion Models for Long-term Predictions](https://ait.ethz.ch/projects/2017/learning-human-motion-models/downloads/3dv_learninghumanmotion.pdf)
+
+[3] Pavllo et al. (2018) [Modeling human motion with quaternion-based neural networks](https://arxiv.org/abs/1901.07677)
+
+[4] Wang et al. (2018) [Adversarial geometry-aware human motion prediction](http://openaccess.thecvf.com/content_ECCV_2018/papers/Liangyan_Gui_Adversarial_Geometry-Aware_Human_ECCV_2018_paper.pdf)
+
+[5] Mao et al. (2019) [Learning Trajectory Dependencies for Human Motion Prediction](https://arxiv.org/pdf/1908.05436.pdf)
+
+[6] Aksan et al. (2019) [Structured Prediction Helps 3D Human Motion Modelling](https://ait.ethz.ch/projects/2019/spl/)
+
+
 
 
 
