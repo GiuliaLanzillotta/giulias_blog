@@ -1,8 +1,9 @@
 ---
 layout: page
 title: "Deep work by Cal Newport"
-date: 2021-04-29 10:24 +0100
+date: 2020-04-29 10:24 +0100
 categories: thoughts
+published: false
 ---
 ## Intro
 

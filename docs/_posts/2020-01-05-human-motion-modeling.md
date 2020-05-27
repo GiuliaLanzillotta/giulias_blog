@@ -3,6 +3,7 @@ layout: post
 title:  "Stuff on human motion prediction"
 date:   2020-05-01 10:51:43 +0100
 categories: topic review
+published: true
 ---
 <head>
 <script type="text/x-mathjax-config">
