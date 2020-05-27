@@ -16,8 +16,8 @@ categories: topic review
   <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> 
 </head>
 
-<h3>Hello everyone, welcome to my first topic review!</h3>
 
+<h3>Hello everyone, welcome to my first topic review!</h3>
 
 > <h4>Why should we be interested in Human motion prediction?</h4>
 
@@ -59,7 +59,7 @@ The data consists of the recording of seven different actors performing 15 varie
 
 Formally speaking, the input data ${X}$ is a sequence of length $T$ ,$\{(x_1, x_2, ..., x_T)\}$, where a frame $x_t \in{R^N}$ denotes the $N$-dimensional body pose. 
 $N$ depends on the number of joints in the skeleton, $K$, and the size $M$ of the per-joint representation, i.e. $N = K · M$. <br>
-A number of joint-representations has been proposed over the past few years and that of the representation scheme is a choice that has been and still is extensively discussed.<br>
+A number of joint-representations have been proposed over the past few years and that of the representation scheme is a choice that has been and still is extensively discussed.<br>
 A quite common (and easy to come up with) representation is known as *angle-axis* or *exponential maps*: each joint is associated with an axis $w$ (for which you need 3 numbers), and an angle $\alpha$ (at least 3 more numbers in $R^3$). Usually, the input is standardized, discarding the information on the exact rotation vector of each joint, to focus on relative rotations between joints, since they contain information of the actions. Other representation schemes include *rotation matrices, quaternions* (we'll get to this later), *or 3D positions*. 
 <br> 
 <br> 
