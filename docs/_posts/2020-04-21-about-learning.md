@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "About learning"
-date: 2020-04-21 22:10 +0100
+date: 2021-04-21 22:10 +0100
 categories: thoughts
 ---
 This is the first post, and I wanted to inaugurate the page with the following famous quote from **John von Neumann**, which has been source of inspiration and strength for me: 
