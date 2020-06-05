@@ -3,7 +3,17 @@ layout: page
 title: About
 permalink: /about/
 ---
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167322471-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-167322471-2');
+</script>
+</head>
 <div align="center">
 
 <img src="https://pbs.twimg.com/profile_images/1244752767484338177/-sUM1THP_400x400.jpg" width="250"  style="border-radius:50%"/>
