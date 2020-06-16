@@ -3,7 +3,7 @@ layout: page
 title: "Deep work by Cal Newport"
 date: 2020-04-29 10:24 +0100
 categories: thoughts
-published: true 
+published: false 
 ---
 ## Intro
 
@@ -68,6 +68,8 @@ He focuses on an intellectual kind of work, like the one he does, being an assoc
 > **Deep Mode**: A state of distraction-free concentration that keeps you fully immersed in your current activity. <br> 
 
 What I here call *deep mode* is similar in spirit to what in positive psychology is known as [*the flow*](https://en.wikipedia.org/wiki/Flow_(psychology)) or *the zone*. Call it *Deep work* or *Deep mode* or even *Flow*, the problem is that focus does not get along well with a frenetic routine. 
+
+[](https://web.archive.org/web/20131110043540/http://articlescoertvisser.blogspot.com/2007/11/good-business-leadership-flow-and.html)
 
 This last point is the one upon which Newport builds his argument, depicting the ability to work in *a deep way* as essential to obtain a certain level of quality in your results, if not to get results at all. The problem is that a slow-rate working mode does not match a frenetic routine. The deep work settings usually require your brain to engage in a prolonged effort while receiving little to no rewards at all, with a few inputs that come in at a low frequency. As you might have noticed, reading a scientific article feels different from writing an e-mail, having a phone call or attending a conference. The reason is that you're using your brain at two fundamentally distinct rates.<br>
 Even though it is hard to accept, we must face the truth, which is that we humans have limits, like the number of days we got left to live, or the length of the longest sequence of numbers that we can memorize. The number of activities you can commit to on each day is another example of limit, and there's no scheduling trick to escape this rule.<br> 
