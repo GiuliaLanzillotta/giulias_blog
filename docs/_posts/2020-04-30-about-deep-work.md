@@ -2,7 +2,7 @@
 layout: page
 title: "Deep work by Cal Newport"
 date: 2020-04-29 10:24 +0100
-categories: thoughts
+categories: [book review]
 published: false 
 ---
 ## Intro

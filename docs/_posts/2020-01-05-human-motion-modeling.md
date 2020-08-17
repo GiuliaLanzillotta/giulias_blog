@@ -2,10 +2,19 @@
 layout: post
 title:  "Stuff on human motion prediction"
 date:   2020-05-01 10:51:43 +0100
-categories: topic review
+categories: [topic review]
 published: true
 ---
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167322471-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167322471-2');
+</script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
