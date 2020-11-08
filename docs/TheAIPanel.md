@@ -6,7 +6,7 @@ published: false
 ---
 
 ### Hello everyone! 
-Here we hopefully talk about AI (yes, pluralis majestatis). HOWEVER no technical reviews are allowed (at list for now, the rules can change since I am the one setting them -evil laugh in the background-) AND there will be a single general theme among all the posts here, which I may present to you with a few extracts from [Calvin and Hobbes](https://www.calvinandhobbes.com/about-calvin-and-hobbes/).
+Here we hopefully talk about AI (yes, pluralis majestatis). HOWEVER no technical details are allowed (at list for now, the rules can change since I am the one setting them -evil laugh in the background-) AND there will be a single general theme among all the posts here, which I may present to you with a few extracts from [Calvin and Hobbes](https://www.calvinandhobbes.com/about-calvin-and-hobbes/).
 <div align="left">
 <img src="https://64.media.tumblr.com/898e4412d42ea75f909c42993e350fe9/tumblr_mzeq9xbaez1qz6f9yo1_r1_500.jpg" width="350" style="float: left;margin-left: 7px;"/>
 </div>
