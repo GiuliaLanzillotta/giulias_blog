@@ -42,12 +42,12 @@ Indeed the book is organized in two sections and the first one is entirely dedic
 <div align="center">High-Quality Work Produced = (Time Spent) x (Intensity of Focus)</div>
 <br>
 
-This blog post however is about productivity so we'll only be concerned with the second part of the book, which introduces to the reader a series of techniques and tricks (which he calls the "rules") to improve his own deep work skill. I believe many of these suggestions to be applicable in a more general context, and hence I decided to discuss the main takes from this second half in productivity terms. <br>
+This blog post, however, is about productivity so we'll only be concerned with the second part of the book, which introduces the reader to a series of techniques and tricks (which he calls the "rules") to improve his own deep work skill. I believe many of these suggestions to be applicable in a more general context, and hence I decided to discuss the main takes from this second half in productivity terms. <br>
 
 Let me start with a disclaimer or what I consider the main critique I have to move to the book.<br>
-The chapters follow a regular pattern: each of them begins with a rough explanation of its topic, which is then developed by progressively zooming into it. This scheme probably aims at leaving the reader with as much guidance as possible when it comes to implementation. Going from the theory read in a book to the everyday practice is hard, especially if you're not given any material advice. However, in my opinion too many details can trap the user in, making him lose sight of the underlying idea. <br>
+The chapters (of this second part) follow a regular pattern: each of them begins with a rough explanation of its topic, which is then developed by progressively zooming into it, i.e. discussing in more and more depth the implementation side. This scheme probably aims at leaving the reader with as much guidance as possible when it comes to implementation. Going from the theory read in a book to the everyday practice is hard, especially if you're not given any material advice. However, in my opinion too many details can trap the user in, making him lose sight of the underlying idea. <br>
 <mark> Productivity is a personal journey </mark>, and any attempt to shape it into a prescription is doomed to fail. <br>
-In this productivity resembles art: the goal of the mentor is to share the basic techniques, to nurture the intuition and the spirit of its students; while it's then up to the learner to use the given knowledge to create its own artwork. 
+In this productivity resembles art: the goal of the mentor is to share the basic techniques, but, most of all, to nurture the intuition and the spirit of its students; it's up to the learner to use the given knowledge to create its own artwork. 
 
 I nonetheless consider Newport's concepts to be valuable and useful, and I've been experimenting with most of these ideas myself. This seems a good point to start diving into the cool stuff. 
 <br>
@@ -109,7 +109,7 @@ While jdhbfj you think you'll do more you actually end up doing less.
 
 ### Lesson #2: γνῶθι σεαυτόν (know thyself)
 
-Transliterated as "gnōthi seauton" lesson #2 traces back to ancient Greece. Popularly associated with the philosopher Socrates, it is actually attributed to multiple figures.I should say that this aphorism is not really in the book, but the idea is indirectly mentioned in the chapter dedicated to *rule #1: work deeply*. <br> 
+Transliterated as "gnōthi seauton" lesson #2 traces back to ancient Greece. Popularly associated with the philosopher Socrates, it is actually attributed to multiple figures. I should say that this aphorism is not really in the book, but the idea is indirectly mentioned in the chapter dedicated to *rule #1: work deeply*. <br> 
 Rule #1 is about helping the reader smooth into a more deep-work compatible routine. Newport presents six strategies to "hijack your brain’s motivation center" and "recharge your willpower reserves at the fastest possible rate". The main obstacle being faced here can be summarized as follows: 
 > You have a finite amount of willpower that becomes depleted as you use it.
 
@@ -137,9 +137,18 @@ In the following lessons the discourse will get more practical, as I'll dive int
 
 ### Lesson #3: measures! 
 
-At the beginning of this post I described productivity as a pseudo-scientific approach to everyday life. As for any scientific discipline, it is necessary to define measures. Newport touches on measures in the chapter dedicated to *rule #1* as part of the dispensed advices to help the reader adopt a "deep routine". The discussion on the topic actually builds upon [this](https://www.franklincovey.com/the-4-disciplines.html) book, which Newport references throughout the sections. As the title anticipates, the authors of the book propose 4 "disciplines" to guide companies from the "what" to the "how". 
+At the beginning of this post I described productivity as a pseudo-scientific approach to everyday life. As for any scientific discipline, it is necessary to define measures. Newport touches on measures in the chapter dedicated to *rule #1* as part of the dispensed advices to help the reader adopt a "deep routine". <br>
+The idea discussed in this section build upon the book *[the 4 disciplines of execution](https://www.franklincovey.com/the-4-disciplines.html)*. As the title anticipates, the authors (Chris McChesney, Jim Huling, and Sean Covey) propose 4 "disciplines" to guide companies from the "what" to the "how". 
 
-> It’s often straightforward to identify a strategy needed to achieve a goal, but what trips up companies is figuring out how to execute the strategy once identified. 
+> It’s often straightforward to identify a strategy needed to achieve a goal, but what traps up companies is figuring out how to execute the strategy once identified. 
+
+Although the book is meant for the business world Newport manages to project it into the individuals' routine dimensions through the lenses of personal work habits. Just like many companies, Newport argues, we often find ourselves lost into the 'how', once we've identified the 'what'. He then proceeds to summarize the four disciplines, drawing connections to deep work practices and tailoring them to meet the readers' interests.
+
+I am probably going to disappoint you now as I'm not going to discuss this 4 disciplines with you. However, there is one concept that emerges from this business-minded methodology which I find worth contemplating with you, and that is the idea of measures. 
+
+Second only to establishing priorities, that of identifying the right measures to track your progress is a fundamental step towards accomplishing your goals (be them to gain new clients, or simply to lose some weight). The problem with measures is that people usually use the wrong ones, which the authors of the 4 disciples call "lag measures". 
+
+Go for the lead measures. blablaa
 
 
 #### Lesson #3: The scarcity mindset 
