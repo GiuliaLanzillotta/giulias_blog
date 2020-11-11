@@ -138,17 +138,26 @@ In the following lessons the discourse will get more practical, as I'll dive int
 ### Lesson #3: measures! 
 
 At the beginning of this post I described productivity as a pseudo-scientific approach to everyday life. As for any scientific discipline, it is necessary to define measures. Newport touches on measures in the chapter dedicated to *rule #1* as part of the dispensed advices to help the reader adopt a "deep routine". <br>
-The idea discussed in this section build upon the book *[the 4 disciplines of execution](https://www.franklincovey.com/the-4-disciplines.html)*. As the title anticipates, the authors (Chris McChesney, Jim Huling, and Sean Covey) propose 4 "disciplines" to guide companies from the "what" to the "how". 
+The ideas discussed in this section build upon the book *[the 4 disciplines of execution](https://www.franklincovey.com/the-4-disciplines.html)*. As the title anticipates, the authors (Chris McChesney, Jim Huling, and Sean Covey) propose 4 "disciplines" to guide companies from the "what" to the "how". 
 
 > It’s often straightforward to identify a strategy needed to achieve a goal, but what traps up companies is figuring out how to execute the strategy once identified. 
 
-Although the book is meant for the business world Newport manages to project it into the individuals' routine dimensions through the lenses of personal work habits. Just like many companies, Newport argues, we often find ourselves lost into the 'how', once we've identified the 'what'. He then proceeds to summarize the four disciplines, drawing connections to deep work practices and tailoring them to meet the readers' interests.
+Although the book is meant for the business world Newport manages to project it into the individuals' routine dimension through the lenses of personal work habits. Just like many companies, Newport argues, we often find ourselves lost into the 'how', once we've identified the 'what'. He then proceeds to summarize the four disciplines, drawing connections to deep work practices and tailoring them to meet the readers' interests.
 
-I am probably going to disappoint you now as I'm not going to discuss this 4 disciplines with you. However, there is one concept that emerges from this business-minded methodology which I find worth contemplating with you, and that is the idea of measures. 
+I am probably going to disappoint you now as I'm not going to discuss these 4 disciplines with you. However, there is one concept that emerges from this business-minded methodology which I find worth contemplating with you, and that is the idea of *measures*. 
 
-Second only to establishing priorities, that of identifying the right measures to track your progress is a fundamental step towards accomplishing your goals (be them to gain new clients, or simply to lose some weight). The problem with measures is that people usually use the wrong ones, which the authors of the 4 disciples call "lag measures". 
+Second only to establishing priorities, that of identifying the right measures to track your progress is a fundamental step towards accomplishing your goals (be them to gain new clients, or simply to lose some weight). As the authors of 'the 4 disciplines' claim, the problem with measures is that <ins>people usually use the wrong ones</ins>. In this perspective, they make a useful distinction between what they call *lag* and *lead* measures. <br>
+They call **lag measures** those that describe your ultimate goal: carrying on the examples above, we could identify as lag measures the number of clients gained in the first case and the amount of kg lost in the second one. <br>
+On the other hand, **lead measures** are meant to keep track of the progress towards the goal by measuring "the new behaviors that will drive success on the lag measures". In the business goal case again, we could use as a lead measure the number of calls to the clients per day, while in our personal goal case, we could adopt as lead measure the number of weekly workouts. 
 
-Go for the lead measures. blablaa
+These are trivial (and non binding) examples, which hopefully help you understand the underlying concept. Simply put, the idea is that improving lead measures should seem straightforward, and as the numbers on the lead measures increase your lag measures will likely improve as well, rescuing you from the trap of the 'what'.
+
+> Lead measures turn your attention to improving the behaviors you directly control in the near future that will then have a positive impact on your long-term goals.
+
+Now, Newport proceeds to cast the method into the deep work framework, by suggesting lead measures to track the progress towards a more focused lifestyle. But not finding particularly insightful the specific suggestion, I wouldn't dwell on the details ... Just find measures that have an influence in your day-to-day behavior. 
+
+To finish up the measures topic we also need a public expression of our commitment !
+
 
 
 #### Lesson #3: The scarcity mindset 
