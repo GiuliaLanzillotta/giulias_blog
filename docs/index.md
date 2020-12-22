@@ -17,6 +17,6 @@ layout: home
 </head>
 <div align="center">
 
-<img src="https://media.giphy.com/media/feN0YJbVs0fwA/giphy.gif" width="500"/>
+<img src="https://media.giphy.com/media/LJdgA1td8MFOw/giphy.gif" width="400"/>
 </div>
 

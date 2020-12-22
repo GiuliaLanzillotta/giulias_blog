@@ -9,56 +9,57 @@ published: false
 
 <div align="right">
 <a href="https://www.amazon.co.uk/Deep-Work-Focused-Success-Distracted/dp/B01D0JE7KQ">
-<img src="https://m.media-amazon.com/images/I/51EJRm2IHOL.jpg" width="300"/>
+<img src="https://m.media-amazon.com/images/I/51EJRm2IHOL.jpg" width="250"/>
 </a>
 </div>
 
 ## Intro
 
-This is my first book review, and it's also the first time I talk about productivity, therefore I will spend a few words on the context. 
+This is my first book review and it's the first time I talk about productivity, therefore I believe it is necessary to spend a few words introducing the context. 
 
-I don't remember how I ended up here writing this article, but time management has a central role in my life today. I can honestly admit I (sometimes) obsess over planning and the main reason why I keep scheduling my weeks is simply to make sure not to waste a minute living a life I would not be proud of. <br>
+I can't remember how it started, but time management has a central role in my life today. The people who know me would probably say that I'm obsessed with schedules. And sometimes I have to agree with them. The reason why I relentlessly plan my days is to make sure not to waste time living a life I would not be proud of. <br>
 As [Mark Manson](https://markmanson.net/) puts it: 
 
 > Every moment of every day, whether you realize it or not, you are making a decision on how to spend your time, on what to pay attention to, on where to direct your energy. [...]
 Our values are constantly reflected in the way we choose to behave.<br>
 
+So, for me productivity is about giving value to what we do!<br>
 As a recent book from [David Allen](https://gettingthingsdone.com/) titles, *productivity is the ability of getting things done*. All these productivity *"studies"* recently flooding the internet usually (check for yourself) transcend the specifics of what you are actually "getting done", which has always been the subject of philosophy, or theology. Instead productivity offers a pseudo-scientific, rigorous approach to stay true to the goals we have set for ourselves, avoiding to spend (too much) time on "things" that we do not value. 
 
 Now, getting practical, <mark>productivity is hard</mark>.  <br>
-Forget the idea of a *perfect routine*. Your environment is an unpredictable flux to which you need to promptly adapt. In software engineering terms, planning is a [*continuous delivery*](https://martinfowler.com/bliki/ContinuousDelivery.html). The goal is not to build a finalized product (i.e. the perfect schedule), but instead to make sure that it keeps working even when its main components are subject to modifications. Chasing productivity is like running in circles: there is no finish line, your only target is to keep going. And to endure that you'll need a lot of <ins>will power</ins>, but fear not, as it can be trained just like any muscle in your body and authors like Cal Newport can be our coaches.
+There is no "*perfect routine*" because things change constantly. In software engineering terms, planning is a product in [*continuous delivery*](https://martinfowler.com/bliki/ContinuousDelivery.html). The goal is not to find the shoe that fits your foot (i.e. the perfect schedule), but instead to learn to walk on the ones that you are given. Chasing productivity is like running in circles: there is no finish line, your only target is to keep going. And to endure the effort you'll need a lot of will power (a good motivation helps, but it is not enough). 
 
-I have been collecting <i>productivity heuristics</i> through the last 3-4 years, unaware of the public discourse on the subject, to which I was introduced only recently. This discovery offered me the chance to compare my findings to what the "experts" are saying on the topic at the moment, and sharing the results of this comparison is exactly the goal of this post.
+I have been collecting <i>productivity heuristics</i> through the last 3-4 years, unaware of the public discourse on the subject, to which I've only recently been introduced. This discovery offered me the chance to compare my findings to what the "experts" are saying on the topic at the moment, and sharing the results of this comparison is exactly the goal of this post.
 
 
 <br>
 ## The book
 
-This book is first of all an eulogy and an apology of what Newport defines "*deep work*": 
+This is not a book on productivity. I know, now you're confused. <br>
+"Deep Work" is first of all an eulogy and an apology of what Newport defines (guess what) *deep work*: 
 > Professional activities performed in a state of distraction-free concentration that push your cognitive capabilities to their limit. These efforts create new value, improve your skill, and are hard to replicate.
 
-Indeed the book is organized in two sections and the first one is entirely dedicated to the definition of deep work in contrast to shallow work. 
-<br>In the span of three chapters, Newport describes deep work as a crucial skill "*for anyone looking to move ahead in a globally competitive information economy that tends to chew up and spit out those who aren’t earning their keep*". In order to support his thesis he submits to the reader multiple references from psychological, neurological and social studies to centuries old and recent successful stories, with arguments covering a wide range of subjects. He also provides the reader with the following formula: <br>
-<div align="center">High-Quality Work Produced = (Time Spent) x (Intensity of Focus)</div>
-<br>
+Indeed the book is organized in two sections and the first one is entirely dedicated to the definition of deep work in contrast to "shallow work". 
+<br>In the span of three chapters, Newport describes deep work as a crucial skill "*for anyone looking to move ahead in a globally competitive information economy that tends to chew up and spit out those who aren’t earning their keep*". In order to support his thesis he submits to the reader multiple arguments based on psychology, neuroscience and social science studies, as well as ancient and recent success stories. 
 
-This blog post, however, is about productivity so we'll only be concerned with the second part of the book, which introduces the reader to a series of techniques and tricks (which he calls the "rules") to improve his own deep work skill. I believe many of these suggestions to be applicable in a more general context, and hence I decided to discuss the main takes from this second half in productivity terms. <br>
+In this post we'll only consider the second part of the book, which introduces the reader to a series of techniques (called "rules") to improve the deep work skill. I believe many of these suggestions to be applicable in a more general context, and hence I decided to discuss the main takes from this second half in productivity terms. 
+<br> 
 
-Let me start with a disclaimer or what I consider the main critique I have to move to the book.<br>
-The chapters (of this second part) follow a regular pattern: each of them begins with a rough explanation of its topic, which is then developed by progressively zooming into it, i.e. discussing in more and more depth the implementation side. This scheme probably aims at leaving the reader with as much guidance as possible when it comes to implementation. Going from the theory read in a book to the everyday practice is hard, especially if you're not given any material advice. However, in my opinion too many details can trap the user in, making him lose sight of the underlying idea. <br>
-<mark> Productivity is a personal journey </mark>, and any attempt to shape it into a prescription is doomed to fail. <br>
-In this productivity resembles art: the goal of the mentor is to share the basic techniques, but, most of all, to nurture the intuition and the spirit of its students; it's up to the learner to use the given knowledge to create its own artwork. 
+Let me start with a **disclaimer**.<br>
+In the chapters of this second part Newport exposes many different techniques, often zooming into the implementation details. 
+Going from the theory read in a book to the everyday practice is hard, especially if you're not given much material advice. However, <mark> productivity, like art, is a personal journey </mark>, and any attempt to shape it into a prescription is doomed to fail. Even equipped with the best of Newport advice, you will need to find out by yourself what works better for you. As always, the road to success is paved with failed attempts, so don't give up easily. 
 
-I nonetheless consider Newport's concepts to be valuable and useful, and I've been experimenting with most of these ideas myself. This seems a good point to start diving into the cool stuff. 
+Don't get me wrong: even though they need some adaptation, this book's concepts are anyway valuable and useful. I've been experimenting with most of them myself and I hope to sparkle some curiosity in you too with what I'll say next. <br>
+Well, this seems a good point to start diving into the cool stuff. 
 <br>
 <br>
 
 
 ### Lesson #1:  Embrace boredom
-A natural measure for the quality of one's planning is **efficiency**, which we can formally phrase as the number of goals accomplished per day, or -to leave some elasticity- the percentage of tasks closed per week. It follows that, armed with a better planning, one will never have to turn down opportunities, and hence an increase in productivity should be reflected by an increase in the number of projects he's simultaneously managing.<br>
-
-This perspective leads to embrace multitasking as it was some fairy dust only waiting to be discovered. "Two grains of multitasking and you're done!" The underlying idea is that economic, social or even personal growth requires a similar increase in efficiency. That nothing is impossible as we just need to manage our time more wisely, to be more productive, more efficient in order to accomplish one, two or even a thousand more goals. More, more, more...<br> 
-Unfortunately, research shows that this approach is not sustainable for human beings, and, for what it's worth, I can empirically support the thesis from my personal experience as a "*multitasker*" (but this is another story).<br>
+What comes as a natural measure for the quality of a plan is **efficiency**, which we can formally phrase as the number of goals accomplished per day. 
+Intuitively, efficiency is the direct answer to the question: "how much have you done today", which is to my surprise often confused with the question "how satisfied are you with your day"? <br>
+In an ideal world the key to efficiency is a better plan: one doesn't have to turn down any  opportunity if he's a good enough planner. This perspective naturally leads to (obsessive) multitasking, which, let's be honest, works very well in the beginning. The problems arise when you let these early successes convince you that anything is achievable this way, that you just need to press down on the accelerator and you'll be in Dreams Town in the blink of an eye. <br>
+FLASH NEWS: *human beings don't work this way*. <br>
 In the introduction to the chapter Cal Newport cites [this interesting interview](https://www.npr.org/2013/05/10/182861382/the-myth-of-multitasking?t=1599744251093) from Clifford Nass, who describes the *myth of multitasking* as follows: 
 
 > **N**: So we have scales that allow us to divide up people into people who multitask all the time and people who rarely do, and the differences are remarkable. People who multitask all the time can't filter out irrelevancy. They can't manage a working memory. They're chronically distracted. 
@@ -69,10 +70,10 @@ And a few sentences later:
 **N**: That's precisely right. Our brains have to be retrained to multitask and our brains, if we do it all the time - brains are remarkably plastic, remarkably adaptable. We train our brains to a new way of thinking. And then when we try to revert our brains back, our brains are plastic but they're not elastic. They don't just snap back into shape.
 
 As Nass is highlighting here, <mark>there is a fallacy in the efficiency-is-the-key mindset</mark>. <br> 
-The problem stems from the fact that the mind easily develops addiction for stimuli, and anything that represents a distraction from your current occupation will come to you in form of a physical (visual, auditory, ...) stimulus. Think about this: how often do you find yourself doing exactly nothing, letting your mind free to wander without cracking under the pressure of refreshing your favorite social homepage, picking up a new activity or simply checking (again) the email?
+To summarise, the problem stems from the fact that the mind easily develops addiction to stimuli, and anything that represents a distraction from your current occupation will come to you in form of a (visual, auditory, ...) stimulus. Think about this: how often do you find yourself doing exactly nothing, i.e. letting your mind free to wander without cracking under the pressure of refreshing your favorite social homepage, picking up a new activity or simply checking (again) the email?
 
 What professor Nass is revealing is that multitasking has consequences, which is far from a known and a surely underestimated fact.
-If you keep intensifying your routine and filling up your calendar, maybe to the point where you start multitask obsessively, your mind is going to adapt to an high frequency stream of inputs and you will gradually lose your ability to stay more than 2 minutes on any given task. 
+If you keep intensifying your routine and filling up your calendar your mind is going to adapt to an high frequency stream of inputs and you will gradually lose your ability to stay more than 2 minutes on any given task. 
 
 <!-- Even though it is hard to accept, we must face the truth, which is that we humans have limits, like the number of days we got left to live, or the length of the longest sequence of numbers that we can memorize. The number of activities you can commit to on each day is another example of such a limit, and there's no scheduling trick that can help you escape this rule.<br> -->
 
