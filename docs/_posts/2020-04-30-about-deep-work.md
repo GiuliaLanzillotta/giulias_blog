@@ -5,7 +5,7 @@ date: 2020-04-29 10:24 +0100
 categories: [book review]
 published: false 
 ---
-# A personal viewpoint
+# A personal review
 
 <div align="right">
 <a href="https://www.amazon.co.uk/Deep-Work-Focused-Success-Distracted/dp/B01D0JE7KQ">
@@ -14,8 +14,6 @@ published: false
 </div>
 
 ## Intro
-
-This is my first book review and it's the first time I talk about productivity, therefore I believe it is necessary to spend a few words introducing the context. 
 
 I can't remember how it started, but time management has a central role in my life today. The people who know me would probably say that I'm obsessed with schedules. And sometimes I have to agree with them. The reason why I relentlessly plan my days is to make sure not to waste time living a life I would not be proud of. <br>
 As [Mark Manson](https://markmanson.net/) puts it: 
@@ -57,11 +55,19 @@ Well, this seems a good point to start diving into the cool stuff.
 
 ### Lesson #1:  Embrace boredom
 What comes as a natural measure for the quality of a plan is **efficiency**, which we can formally phrase as the number of goals accomplished per day. 
+
+<div align="right">
+<img src="https://media.giphy.com/media/SiEF80pqzJHhM3dOw0/giphy.gif" width="300" style="float: right;margin-right: 7px;margin-top: 0px;margin-btm:17px;">
+</div>
+
+<div align="justify">
 Intuitively, efficiency is the direct answer to the question: "how much have you done today", which is to my surprise often confused with the question "how satisfied are you with your day"? <br>
 In an ideal world the key to efficiency is a better plan: one doesn't have to turn down any  opportunity if he's a good enough planner. This perspective naturally leads to (obsessive) multitasking, which, let's be honest, works very well in the beginning. The problems arise when you let these early successes convince you that anything is achievable this way, that you just need to press down on the accelerator and you'll be in Dreams Town in the blink of an eye. <br>
-FLASH NEWS: *human beings don't work this way*. <br>
-In the introduction to the chapter Cal Newport cites [this interesting interview](https://www.npr.org/2013/05/10/182861382/the-myth-of-multitasking?t=1599744251093) from Clifford Nass, who describes the *myth of multitasking* as follows: 
+</div>
 
+<br>
+<mark>FLASH NEWS</mark>: *human beings don't work this way*. <br>
+In the introduction to the chapter Cal Newport cites [this interesting interview](https://www.npr.org/2013/05/10/182861382/the-myth-of-multitasking?t=1599744251093) from Clifford Nass, who describes the *myth of multitasking* as follows: 
 > **N**: So we have scales that allow us to divide up people into people who multitask all the time and people who rarely do, and the differences are remarkable. People who multitask all the time can't filter out irrelevancy. They can't manage a working memory. They're chronically distracted. 
 
 And a few sentences later: 
@@ -79,11 +85,20 @@ What professor Nass is revealing is that multitasking has consequences, which is
 *So what should we do instead?*
 
 
-#### Forget efficiency, embrace boredom.
-This is "rule" number 2, and it is the subject of a whole chapter in the book (chapter 2, part 2). <br>
-The chapter dwells on ways to push the limit of your concentration, proposing a few strategies that can help the reader rewire his brain to a configuration better suited for staying on task. <br>
-*Productive meditation, distraction breaks, hard deadlines for focused tasks* are some examples of the suggestions to "*strengthen your distraction-resisting muscles*", and "*improve your ability to think deeply*". This is not what I will cover now though, as I would like to spend the last words in this section on the core concept: embracing boredom. 
 
+<div align="left">
+<img src="https://media.giphy.com/media/WUll4mFthg436F5XK6/giphy.gif" width="300" style="float: left;margin-right: 7px;margin-top: 0px;margin-btm:17px;">
+</div>
+
+#### Forget efficiency, embrace boredom.
+<div align = "justify">
+This is "rule" number 2, and it is the subject of a whole chapter in the book (chapter 2, part 2).
+The chapter dwells on ways to push the limit of your concentration, proposing a few strategies that can help the reader rewire his brain to a configuration better suited for staying on task. <br>
+
+<i>Productive meditation, distraction breaks, hard deadlines for focused tasks</i> are some examples of the suggestions to "<i>strengthen your distraction-resisting muscles</i>", and "<i>improve your ability to think deeply</i>".
+This is not what I will cover now though, as I would like to spend the last words in this section on the core concept: embracing boredom. <br>
+</div>
+<br>
 When later today you will find yourself free from your daily business try to notice where your mind goes. Instinctively your attention will be drawn to any stimulus in your environment in order to escape boredom. Even knowing it, you will give in to this instinct without even noticing. However, not all hope is lost, as to gain control of our attention simply takes practice. Once aware of this automatic process, just try to fight it by simply not reacting to the stimulus: do nothing. *Embrace boredom*.
 
 What Newport is saying here should seem counter-intuitive to those of us accustomed to the breaks-averse, the work-until-you-pass-out approach. The shift in perspective is radical: **to be more productive you should do less**.<br> 
@@ -114,41 +129,53 @@ While jdhbfj you think you'll do more you actually end up doing less.
 
 ### Lesson #2: γνῶθι σεαυτόν (know thyself)
 
-Transliterated as "gnōthi seauton" this renowned lesson traces back to ancient Greece. The aphorism itself is never mentioned in the book, but, as you're about to see, the concept is discussed in the chapter dedicated to *rule #1: work deeply*. <br> 
-As the first thing to be discussed when picking up a new habit is **where**-should-I-start, Rule #1 is about helping the reader smooth into a more deep-work compatible routine. Newport presents six strategies to "*hijack your brain’s motivation center*" and "*recharge your willpower reserves at the fastest possible rate*". According to Newport, the first obstacle you will face when switching to the new routine is the exhaustion of your willpower: 
+Transliterated as "gnōthi seauton" this renowned lesson traces back to ancient Greece. The aphorism itself is never mentioned in the book, but, as you're about to see, the concept is at the core of the discussion in chapter 1 (part 2), dedicated to *rule #1: work deeply*. <br> 
+As the first thing to be asked when picking up a new habit is **where**-should-I-start, Rule #1 is about helping the reader smooth into a more deep-work compatible routine. The chapter presents 6 strategies to "*hijack your brain’s motivation center*" and "*recharge your willpower reserves at the fastest possible rate*". In fact, according to Newport, <ins>willpower</ins> the first thing you need to work on if you want to start "working deeply": 
 > You have a finite amount of willpower that becomes depleted as you use it.
 
 Basically, if you really want to tackle your habits it is not enough to be motivated (no matter how good your reasons may be): over time distractions will get the best of your intentions. <br>
-As I anticipated above, although Newport is here focusing on the transition from shallow to deep work, this point can actually be made in the more general context of changing habits (the classic 'following a new diet' falling into this category).
+As I anticipated above, although Newport is here focusing on the transition from shallow to deep work, this point can actually be made in the more general context of changing habits (think, for instance, of the classic 'following a new diet').
 
-*So, what is Newport's advice?*
+*So, what is Newport's advice? <br>How to survive a big change with a limited amount of willpower?*
 
 #### Be smart about your habits.
 
-Drastic, instantaneous change requires an infinite amount of willpower in order to work. <br>
-However, Newport argues, we can make things easier for us if we only *know ourselves*. The insight is that acting on the environment is much easier than acting on ourselves. So, if we could find a way to make our environment help us stay on track, we'd need a lot less willpower. 
 
+Drastic, instantaneous change requires an infinite amount of willpower in order to work. <br>
+However, Newport argues, we can make things easier for us if we only <i>know ourselves</i>. The insight is that acting on the environment is much easier than acting on ourselves. So, if we could find a way to make our environment help us stay on track, we'd need a lot less willpower. 
+
+
+<div align="right">
+<img src="https://media.giphy.com/media/fiwgH8FbtaW08r4qiB/giphy.gif" width="300" style="float: right;margin-right: 7px;margin-top: 0px;margin-bottom:17px;margin-left:17px;">
+</div>
+
+<div align="justify">
 Let me give you a personal example many of you will probably be familiar with. 
 I have now many times tried to decrease the time spent on social networks. Any app store is packed with apps whose only job is to help you quit checking your phone. <br>
-The maybe most natural approach is to <ins>just rely on your willpower</ins>: whenever you're about to open a social media simply stop.  SPOILER ALERT: it does not work! At least, it did not cut it for me (sadface). You usually make it through the first day, and if your motivation is strong enough you can even make it through a week, but sooner or later you will feel depleted of any energy to resist the temptation and you will give in to the old habit. Addictive social media: 1 / Me: 0. <br> 
-Having read this book I decided to adopt what we shall call the *be-smart-about-your-habits* or simply the *Newport* approach.
-<mark>I started by observing myself</mark>. *When was I most compelled to pick up the phone*? *What was happening just before the scrolling*? I noticed that the gesture was automatic, almost mechanic. It would happen whenever I had some free time, or when I was about to face a challenging concept, that required concentration to be understood. Additionally, it would happen that, feeling obliged to answer to texts, I would find myself half an hour later trapped into some conversation. Chatting is not the root of all evils, but it shouldn't be prioritized over any other activity. <br>
-<mark>I then proceeded to act on the environment.</mark> First of all, I established "chatting hours", as <ins>I knew it would have made me feel better knowing that sooner or later I would take time to answer the texts</ins>. Secondly, I would purposely hide my phone from my sight, and put it at least at arm length distance, preferably in another room. In this way the habit had its legs cut off. Addictive social media: 1 / Me: 1.
+The maybe most natural approach is to <ins>just rely on your willpower</ins>: whenever you're about to open a social media simply stop.  <br>
+<b>SPOILER ALERT</b>: it does not work! At least, it did not cut it for me (sadface). You usually make it through the first day, and if your motivation is strong enough you can even make it through a week, but sooner or later you will feel depleted of any energy to resist the temptation and you will give in to the old habit.<br>
+<b>Addictive social media: 1 / Me: 0.</b> <br> 
+</div>
 
-You should now start seeing the point of this lesson. To know yourself (i.e. what you crave and what you fear) is the most effective weapon available not only to fight bad habits, but I'd dare say to achieve any goal. Evidence for this thesis is spread all over the internet in the innumerable articles on productivity (like this one) that come out everyday with some fresh and promising tricks ("try locking yourself in a room" kind of tricks) to try out. 
+Having read this book I decided to adopt what we shall call the *be-smart-about-your-habits* approach or simply the *Newport* approach.
+<mark>I started by observing myself</mark>. *When was I most compelled to pick up the phone*? *What was happening just before the scrolling*? I noticed that the gesture was automatic, almost mechanic. It would happen whenever I had breaks, or when I was working on a mentally challenging task. I also noticed that, feeling obliged to answer to texts, whenever I picked up the phone I would find myself half an hour later trapped into some conversation. Chatting is not the root of all evils, but it shouldn't be prioritized over any other activity. <br>
+<mark>I then proceeded to act on the environment.</mark> First of all, I established "chatting hours", as I knew it would have made me feel better knowing that sooner or later I would take the time to answer the texts. Secondly, I would purposely hide my phone from my sight, and put it at least at arm length distance, preferably in another room. In this way the habit had its legs cut off. <br>
+<b>Addictive social media: 1 / Me: 1.</b>
+
+You should now start seeing the point of this lesson. To know yourself (i.e. know what you crave and what you fear) is the most effective weapon available not only to fight bad habits but, I'd dare say, to achieve any goal. Evidence for this thesis is spread all over the internet in the innumerable articles on productivity (like this one) that come out everyday with some fresh and promising tricks ("try locking yourself in a room" kind of tricks) to try out. 
 
 In the same chapter Cal Newport exposes a few techniques to help you drag yourself into a deep work schedule, some good examples being: *ritualize*, *make grand gesture* and *don't work alone*. These tips mostly rely on some basic psychology principles which come in very handy such cases (for those of you interested I suggest reading [this](https://www.amazon.com/Influence-Psychology-Persuasion-Robert-Cialdini/dp/006124189X) book).<br>
-However, you don't need to be an expert in psychology in order to be productive: you "only" need to know yourself. And in order to get to know yourself better I suggest you start from observation. Ask yourself the right questions, and try to give honest answers. Self-awareness is a tremendously valuable asset in productivity, "use it well".<br>
-
-<br> 
+However, you don't need to be an expert in psychology in order to be productive: you "only" need to know yourself. And in order to get to know yourself better I suggest you start from observation. Ask yourself the right questions, and try to give honest answers. Self-awareness is a tremendously valuable asset in productivity, "use it well".
+<br>
+<br>
 
 In the following (and last) lessons I'll dive into two of my favorite psychology-driven productivity tips, which I believe to be general enough to be easily adaptable to almost any routine.
 
 
 ### Lesson #3: measures! 
 
-At the beginning of this post I described productivity as a pseudo-scientific approach to everyday life. As for any scientific discipline, it is necessary to define measures. Newport touches on measures in the chapter dedicated to *rule #1* as part of the dispensed advices that should help the reader in implementing a "deep routine". <br>
-The ideas discussed in this section build upon the book *[the 4 disciplines of execution](https://www.franklincovey.com/the-4-disciplines.html)*(4DX). As the title anticipates, the authors (Chris McChesney, Jim Huling, and Sean Covey) propose 4 "disciplines" to guide companies from the "what" to the "how". 
+At the beginning of this post I described productivity as a pseudo-scientific approach to everyday life. Like in any other scientific discipline, it is necessary to define measures. Newport touches on measures in the chapter dedicated to *rule #1* as part of the dispensed advices that should help the reader implement a "deep routine". <br>
+The ideas discussed in this section build upon the book *[the 4 disciplines of execution](https://www.franklincovey.com/the-4-disciplines.html)* (4DX). As the title anticipates, the authors (Chris McChesney, Jim Huling, and Sean Covey) propose 4 "disciplines" to guide companies from the "what" to the "how". 
 
 > It’s often straightforward to identify a strategy needed to achieve a goal, but what traps up companies is figuring out how to execute the strategy once identified. 
 
@@ -158,14 +185,14 @@ I am probably going to disappoint you now as I'm not going to discuss these 4 di
 
 Second only to establishing priorities, that of identifying the right measures to track your progress is a fundamental step towards accomplishing your goals (be them to increase your customer satisfaction, or simply to lose some weight). As the authors of 'the 4 disciplines' claim, the problem with measures is that <ins>people usually use the wrong ones</ins>. In this perspective, they make a useful distinction between what they call *lag* and *lead* measures. <br>
 They call **lag measures** those that describe your ultimate goal: carrying on the examples above, we could identify as lag measures your customer satisfaction scores in the first case and the kgs lost in the second one. <br>
-On the other hand, **lead measures** are meant to keep track of the progress towards the goal by measuring "the new behaviors that will drive success on the lag measures". In the business goal case again, we could use as a lead measure the number of customers who receive free samples (assuming giving free sample makes sense), while in our personal goal case, we could adopt as lead measure the number of weekly workouts. 
+On the other hand, **lead measures** are meant to keep track of the progress towards the goal by measuring "*the new behaviors that will drive success on the lag measures*". In the business goal case again, we could use as a lead measure the number of customers who receive free samples (assuming giving free sample is a sensible business move), while in our personal goal case, we could adopt as lead measure the number of weekly workouts. 
 
-These are trivial (and non binding) examples, which hopefully help you understand the underlying concept. In a nutshell, lead measures bridge the gap between the "what" and the "how", as you can expect your lag measures to eventually improve as you act on the lead measures. 
+These are trivial (and non binding) examples, which hopefully help you understand the underlying concept. In a nutshell, lead measures bridge the gap between the "what" and the "how", since you can expect your lag measures to eventually improve as you act on the lead measures. 
 
 > Lead measures turn your attention to improving the behaviors you directly control in the near future that will then have a positive impact on your long-term goals.
 
 Now, Newport proceeds to present a couple of tricks suggested by the authors of 4DX to help drive your engagement towards the goal.<br>
-The first one is to *keep a compelling scoreboard*: as the authors explain, "people play differently when they’re keeping score"; the idea is to keep track of the progress on the lead measures publicly in order to naturally activate a sense of competition that keeps the team focused on these measures. To adapt the idea to his deep work setting, Newport scoreboard in the office. I tried, and for me it was not the competition but the being held accountable for it. 
+The first one is to *keep a compelling scoreboard*: as the authors explain, "*people play differently when they’re keeping score*"; the idea is to keep track of the progress on the lead measures publicly in order to naturally activate a sense of competition that keeps the team focused on these measures. To adapt the idea to his deep work setting, Newport scoreboard in the office. I tried, and for me it was not the competition but the being held accountable for it. 
 
 To finish up the measures topic we also need a public expression of our commitment !
 
@@ -182,4 +209,10 @@ To finish up the measures topic we also need a public expression of our commitme
 #### 4. The purposed benefit approach
 191
 222!
+
+
+
+<div align="center">
+<img src="https://media.giphy.com/media/l0IyjeA5mmMZjhyPm/giphy.gif" width="300" style="float: center;margin:7px;">
+</div>
 
