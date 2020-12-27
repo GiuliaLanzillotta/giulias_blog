@@ -87,7 +87,7 @@ What professor Nass is revealing is that multitasking has consequences, which is
 
 
 <div align="left">
-<img src="https://media.giphy.com/media/WUll4mFthg436F5XK6/giphy.gif" width="300" style="float: left;margin-right: 7px;margin-top: 0px;margin-btm:17px;">
+<img src="https://media.giphy.com/media/2UwXedfUGsXJfLR2XL/giphy.gif" width="300" style="float: left;margin-right: 7px;margin-top: 0px;margin-btm:17px;">
 </div>
 
 #### Forget efficiency, embrace boredom.
@@ -146,7 +146,7 @@ However, Newport argues, we can make things easier for us if we only <i>know our
 
 
 <div align="right">
-<img src="https://media.giphy.com/media/fiwgH8FbtaW08r4qiB/giphy.gif" width="300" style="float: right;margin-right: 7px;margin-top: 0px;margin-bottom:17px;margin-left:17px;">
+<img src="https://media.giphy.com/media/hrv0K0L31SR76ipoWh/giphy.gif" width="300" style="float: right;margin-right: 7px;margin-top: 0px;margin-bottom:17px;margin-left:17px;">
 </div>
 
 <div align="justify">
@@ -181,7 +181,7 @@ The ideas discussed in this section build upon the book *[the 4 disciplines of e
 
 Although the book is meant for the business world Newport applies it to the realm of individual work planning.  Just like many companies, Newport argues, we often find ourselves lost into the 'how', once we've identified the 'what'. He then proceeds to summarize the four disciplines, drawing connections to deep work practices and tailoring them to meet the readers' interests.
 
-I am probably going to disappoint you now as I'm not going to discuss these 4 disciplines with you. However, there is one concept that emerges from this business-minded methodology which I find worth contemplating with you, and that, as you might have guessed, is the idea of *measures*. 
+I am probably going to disappoint you now as I'm not going to discuss all 4 disciplines with you, although I'll mention one or two later. There is one concept that emerges from this business-minded methodology which I find worth contemplating with you, and that, as you might have guessed, is the idea of *measures*. 
 
 Second only to establishing priorities, that of identifying the right measures to track your progress is a fundamental step towards accomplishing your goals (be them to increase your customer satisfaction, or simply to lose some weight). As the authors of 'the 4 disciplines' claim, the problem with measures is that <ins>people usually use the wrong ones</ins>. In this perspective, they make a useful distinction between what they call *lag* and *lead* measures. <br>
 They call **lag measures** those that describe your ultimate goal: carrying on the examples above, we could identify as lag measures your customer satisfaction scores in the first case and the kgs lost in the second one. <br>
@@ -191,8 +191,13 @@ These are trivial (and non binding) examples, which hopefully help you understan
 
 > Lead measures turn your attention to improving the behaviors you directly control in the near future that will then have a positive impact on your long-term goals.
 
-Now, Newport proceeds to present a couple of tricks suggested by the authors of 4DX to help drive your engagement towards the goal.<br>
-The first one is to *keep a compelling scoreboard*: as the authors explain, "*people play differently when they’re keeping score*"; the idea is to keep track of the progress on the lead measures publicly in order to naturally activate a sense of competition that keeps the team focused on these measures. To adapt the idea to his deep work setting, Newport scoreboard in the office. I tried, and for me it was not the competition but the being held accountable for it. 
+Now, these are all fascinating ideas, but defining lag and lead measures is not enough to make real progress. As the authors of 4DX correctly identify, there's one more ingredient to add to the mix: **emotional engagement**. To be precise, you won't find the expression "emotional engagement" in the 4DX or the Deep Work books. In fact, the 4DX authors directly present a practical way to achieve it as one of the 4 disciples: *keep a compelling scoreboard*. <br>
+I am now going to explain to you the scoreboard idea, but I'm later going to propose an alternative also falling under the emotional engagement umbrella, which worked better for me. This is maybe the best example I am going to give you in this article of that "fine tuning" work which I was mentioning in the beginning. Take what you read and make it yours.<br> 
+
+#### Keep a compelling scoreboard
+As the 4DX authors explain, "*people play differently when they’re keeping score*"; the idea is to keep track of the progress on the lead measures publicly in order to naturally activate a sense of competition that keeps the team focused on these measures. To adapt the idea to his deep work setting, Newport scoreboard in the office. I tried, and for me it was not the competition but the being held accountable for it. 
+
+#### Promises: Be held accountable
 
 To finish up the measures topic we also need a public expression of our commitment !
 
