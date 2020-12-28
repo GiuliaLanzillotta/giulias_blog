@@ -175,6 +175,11 @@ In the following (and last) lessons I'll dive into two of my favorite psychology
 ### Lesson #3: measures! 
 
 At the beginning of this post I described productivity as a pseudo-scientific approach to everyday life. Like in any other scientific discipline, it is necessary to define measures. Newport touches on measures in the chapter dedicated to *rule #1* as part of the dispensed advices that should help the reader implement a "deep routine". <br>
+
+<div align="left">
+<img src="{{site.baseurl}}/assets/images/ruler.jpg" width="200" style="float: left;margin-right: 7px;margin-top: 0px;margin-bottom:17px;margin-left:0px;">
+</div>
+
 The ideas discussed in this section build upon the book *[the 4 disciplines of execution](https://www.franklincovey.com/the-4-disciplines.html)* (4DX). As the title anticipates, the authors (Chris McChesney, Jim Huling, and Sean Covey) propose 4 "disciplines" to guide companies from the "what" to the "how". 
 
 > It’s often straightforward to identify a strategy needed to achieve a goal, but what traps up companies is figuring out how to execute the strategy once identified. 
@@ -183,37 +188,61 @@ Although the book is meant for the business world Newport applies it to the real
 
 I am probably going to disappoint you now as I'm not going to discuss all 4 disciplines with you, although I'll mention one or two later. There is one concept that emerges from this business-minded methodology which I find worth contemplating with you, and that, as you might have guessed, is the idea of *measures*. 
 
-Second only to establishing priorities, that of identifying the right measures to track your progress is a fundamental step towards accomplishing your goals (be them to increase your customer satisfaction, or simply to lose some weight). As the authors of 'the 4 disciplines' claim, the problem with measures is that <ins>people usually use the wrong ones</ins>. In this perspective, they make a useful distinction between what they call *lag* and *lead* measures. <br>
-They call **lag measures** those that describe your ultimate goal: carrying on the examples above, we could identify as lag measures your customer satisfaction scores in the first case and the kgs lost in the second one. <br>
+Second only to establishing priorities, that of identifying the right measures to track your progress is a fundamental step towards accomplishing your goals (be them to increase your customer satisfaction, or simply to lose some weight). As the authors of 'the 4 disciplines' claim, the problem with measures is that <ins>people usually use the wrong ones</ins>. In this perspective, they make a useful distinction between what they call *lag* and *lead* measures. 
+
+They call **lag measures** those that describe your ultimate goal: carrying on the examples above, we could identify as lag measures your customer satisfaction scores in the first case and the kgs lost in the second one. 
+
 On the other hand, **lead measures** are meant to keep track of the progress towards the goal by measuring "*the new behaviors that will drive success on the lag measures*". In the business goal case again, we could use as a lead measure the number of customers who receive free samples (assuming giving free sample is a sensible business move), while in our personal goal case, we could adopt as lead measure the number of weekly workouts. 
 
-These are trivial (and non binding) examples, which hopefully help you understand the underlying concept. In a nutshell, lead measures bridge the gap between the "what" and the "how", since you can expect your lag measures to eventually improve as you act on the lead measures. 
+These are trivial examples, which hopefully help you understand the underlying concept. In a nutshell, lead measures bridge the gap between the "what" and the "how", since you can expect your lag measures to eventually improve as you act on the lead measures. 
 
 > Lead measures turn your attention to improving the behaviors you directly control in the near future that will then have a positive impact on your long-term goals.
 
-Now, these are all fascinating ideas, but defining lag and lead measures is not enough to make real progress. As the authors of 4DX correctly identify, there's one more ingredient to add to the mix: **emotional engagement**. To be precise, you won't find the expression "emotional engagement" in the 4DX or the Deep Work books. In fact, the 4DX authors directly present a practical way to achieve it as one of the 4 disciples: *keep a compelling scoreboard*. <br>
-I am now going to explain to you the scoreboard idea, but I'm later going to propose an alternative also falling under the emotional engagement umbrella, which worked better for me. This is maybe the best example I am going to give you in this article of that "fine tuning" work which I was mentioning in the beginning. Take what you read and make it yours.<br> 
+<br>
 
-#### Keep a compelling scoreboard
-As the 4DX authors explain, "*people play differently when they’re keeping score*"; the idea is to keep track of the progress on the lead measures publicly in order to naturally activate a sense of competition that keeps the team focused on these measures. To adapt the idea to his deep work setting, Newport scoreboard in the office. I tried, and for me it was not the competition but the being held accountable for it. 
+Now, these are all fascinating ideas, but defining lag and lead measures is not enough to make real progress. As the authors of 4DX correctly identify, there's one more ingredient to add to the mix: **emotional engagement**. To be precise, you won't find the expression "emotional engagement" in the 4DX or the Deep Work books, as this is an abstraction of what they actually present. In fact, discipline #3, *keep a compelling scoreboard*, is just one way to obtain what I call emotional engagement.<br>
+I am now going to explain to you the scoreboard idea, but I'm later going to propose an alternative (also falling under the emotional engagement umbrella) which worked better for me. This is maybe the best example I am going to give you in this article of that "fine tuning" work which I was mentioning in the beginning. Take what you read and make it yours.<br> 
 
-#### Promises: Be held accountable
+As the 4DX authors explain, "*people play differently when they’re keeping score*"; the idea is to keep track of the progress on the lead measures publicly in order to naturally activate a sense of competition that keeps the team focused on these measures. Notice that again here we find a trick that leverages a simple and effective psychology rule: as I was writing before, psychology permeates the "field" of productivity heuristics.<br>
+Now back to our Deep Work book. To adapt the idea to the deep work setting, Newport suggests introducing a physical artifact in the workplace that displays the personal progress on whatever lead measure one has adopted. He spends a short paragraph portraying the Deep-Work scoreboard. I'll spare you the description, but I'll mention one interesting take. What stands out from the crowd of details is the claimed benefit of a visceral, physical connection with our results. Newport is suggesting that tangible evidence of our progress may foster our motivation and additionally help calibrating our expectations on the work that we can get done.
 
-To finish up the measures topic we also need a public expression of our commitment !
+I experimented with the Newport version of the 4DX technique (this is the case for every idea discussed in this article), and, as I anticipated above, I crafted an alternative which works better in my case. <br>
+The physical scoreboard was not enough to keep me motivated: when the first excitement wore out I'd forget about using it, which in turn made it less effective. <br>
+Knowing myself, I hypothesized that since there was no one except me checking the score, I felt free to drop it. I then devised a strategy that would force me to keep using the scoreboard: **I went public about my progress**. I used a virtual scoreboard that everyone could see and which would automatically track my lead measure. <br> 
+This approach borrows at a high level from discipline #4, *Create a Cadence of Accountability*. The idea there is to schedule frequent meetings with your co-workers to confront the scoreboards. <br>
+However, instead of competition as suggested by the 4DX authors I leveraged a force that I know to have a stronger pull on me: pride. Being held accountable for my work made the cut: I still use that same scoreboard.<br>
+Additionally, it may help to involve your friends/colleagues in the game: share your scoreboard with them, and explain your goals. It doesn't matter if they will actually start checking it regularly: from that moment on your goals will feel more concrete and you'll work on the same goal with a new energy.<br>
+The same principle proved to be effective in different contexts. One example is this website. Writing helps me reorganize my thoughts. Murakami can say it better than me: 
+> Which is why I am writing this book. To think. To understand. It just happens to be the way I'm made. I have to write things down to feel I fully comprehend them.
+
+So yes, I started this project for myself. But I'm sharing it not because I believe that someone apart from my friends/colleagues will ever casually stumble upon it (although I deep down hope so), but because I know that I would have dropped this article long ago if I hadn't already involved someone else in it. <br>
+
+I hope that the general concept of emotional engagement and why it is beneficial got through. It is now time to close this topic and sail to the exploration of our fourth and last lesson.
 
 
+### Lesson #4: The shutdown
 
-#### Lesson #3: The scarcity mindset 
-240
-- for him this means scheduling all in advance, leaving spaces and avoiding working on weekday
-- for me this is not possible, I adopt the all in the morning strategy
+This last lesson will be a short one. The idea is discussed in the same chapter that interested lesson #2 and lesson #3, which is maybe the most rich in practical advices.<br>
+When I first read about the idea I was extremely excited because I had previously conceived a productivity heuristic (the *fuck-up day*) which precisely matched the concept. <br>
+As you'll see, Newport's implementation differs from mine, but once again: productivity is a personal journey. <br>
+The method is simple to execute, and surprisingly effective. I hope that when I'll be finished presenting it you'll share some of my enthusiasm for it. <br>
+I'll first discuss the insight, to then briefly touch on the two implementations. <br>
 
-        5. Limited resources
-147
+The general concept is that our minds (as well as our bodies) need a **periodic shutdown** to function properly if they're regularly under pressure. This is not something that can be defeated with a bit of exercise: it's physiological. 
+Newport as usual provides plenty of evidence in support of the idea, but I'll discuss my favorite one here. 
 
-#### 4. The purposed benefit approach
-191
-222!
+The attention restoration theory (ART) claims that spending time in nature (instead of in the city) can improve our ability to concentrate. This theory, which was first proposed in the 1980s by the University of Michigan psychologists Rachel Kaplan and Stephen Kaplan is based on the concept of *attention fatigue*. To concentrate requires what ART calls "*directed attention*". This resource is finite: If you exhaust it, you’ll struggle to concentrate. <br>
+A paper from 2008 discovered a significant difference in the ability to concentrate between a group asked to take a walk in the city and another asked to walk in a park instead. A possible explanation for the phenomenon is that navigating through the busy city streets requires a consistent level of directed attention, while walking through nature keeps the mind stimulated without requiring directed attention. <br> 
+But Newport is not suggesting to leave the city for the better, *hashtag #countrylife*. As he highlights, the implications of ART expand beyond the benefits of nature. The core mechanism of the theory is that you can restore your (highly valuable) ability to direct your attention by assigning some time to a relaxing activity. It doesn't have to be nature, but it must be something that fascinates you enough to avoid the risk of stopping to check emails in the middle of the break. Beware as the more pressuring your duties (think of an approaching deadline), the harder it will be to take a break from them, and hence the smarter you'll have to be when choosing the restoring activity.
+
+This is most likely not the first time you hear about the benefits of relax, so what's all the fuss about? Thanks for the question. <br> 
+The findings from ART theory are not praising rest per se, but they depict it as an essential ingredient in a mentally/physically engaging routine. As Newport says:  
+> Put another way, trying to squeeze a little more work out of your evenings might reduce your effectiveness the next day enough that you end up getting less done than if you had instead respected a shutdown.
+
+This *less-is-more* chorus may remind you of lesson #1: embrace boredom. However, while there I was advocating against the efficiency-is-the-key mindset, here I am advocating for a specific activity: resting.
+
+Now, we finally go into what me and Newport have to suggest you.
+
 
 
 
