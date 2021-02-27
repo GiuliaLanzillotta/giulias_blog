@@ -23,7 +23,6 @@ A second ambitious goal of this series of posts is to give a structure to the re
 
 
 
-
-With no further due, let me point you to the posts in this discussion. <br>
+With no further ado, let me point you to the posts in this discussion. <br>
 
 [Discussion 1]({% post_url 2020-08-17-TheAIPanel1 %})

@@ -1,11 +1,11 @@
 ---
 layout: page
-title: "Deep work by Cal Newport"
+title: "Deep work by Cal Newport - part 1"
 date: 2020-04-29 10:24 +0100
 categories: [book review]
 published: false 
 ---
-# A personal review
+# A personal review 
 
 <div align="right">
 <a href="https://www.amazon.co.uk/Deep-Work-Focused-Success-Distracted/dp/B01D0JE7KQ">
@@ -28,6 +28,8 @@ Now, getting practical, <mark>productivity is hard</mark>.  <br>
 There is no "*perfect routine*" because things change constantly. In software engineering terms, planning is a product in [*continuous delivery*](https://martinfowler.com/bliki/ContinuousDelivery.html). The goal is not to find the shoe that fits your foot (i.e. the perfect schedule), but instead to learn to walk on the ones that you are given. Chasing productivity is like running in circles: there is no finish line, your only target is to keep going. And to endure the effort you'll need a lot of will power (a good motivation helps, but it is not enough). 
 
 I have been collecting <i>productivity heuristics</i> through the last 3-4 years, unaware of the public discourse on the subject, to which I've only recently been introduced. This discovery offered me the chance to compare my findings to what the "experts" are saying on the topic at the moment, and sharing the results of this comparison is exactly the goal of this post.
+
+
 
 
 <br>
