@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Deep work series - episode 3"
-date: 2021-03-8 10:20 +0100
+date: 2021-03-14 17:30 +0100
 categories: [book review]
 published: true 
 ---
