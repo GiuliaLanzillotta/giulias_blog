@@ -1,12 +1,16 @@
 ---
 layout: page
-title: The AI panel
-permalink: /TheAIPanel/
+title: AI panel
+permalink: /AIPanel/
 published: false
 ---
 
-### Hello everyone! 
-Here we hopefully talk about AI (yes, pluralis majestatis). HOWEVER no technical details are allowed (at list for now, the rules can change since I am the one setting them -evil laugh in the background-) AND there will be a single general theme among all the posts here, which I may present to you with a few extracts from [Calvin and Hobbes](https://www.calvinandhobbes.com/about-calvin-and-hobbes/).
+### Hello everyone, 
+<div align="justify">
+welcome to the AI panel. <br><br>
+I wrongly borrowed the word panel: there are not going to be dialogs or interviews, and there is (unfortunately) not going to be any live interaction between us - though discussions over emails are more than welcome. This is another series of posts, that I prefer to call <it>panel</it> because there is no endpoint to reach, no scheduled route to follow -just like in a typical conversation. I've been wanting to start this panel for quite some time now as it will hopefully tidy up the bundle of considerations that have been piling up (literally piling up in my notes) for maybe a couple of years. The panel will enjoy a common theme over its inherent heterogeneity of topics which is the big elephant in this (also very big) room called AI.
+[The following pictures are taken from the great comic strip <a href="https://en.wikipedia.org/wiki/Calvin_and_Hobbes">Calvin and Hobbes</a>].<br>
+</div>
 <div align="left">
 <img src="https://64.media.tumblr.com/898e4412d42ea75f909c42993e350fe9/tumblr_mzeq9xbaez1qz6f9yo1_r1_500.jpg" width="350" style="float: left;margin-left: 7px;"/>
 </div>
