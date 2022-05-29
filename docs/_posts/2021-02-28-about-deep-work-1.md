@@ -1,9 +1,11 @@
 ---
-layout: page
+layout: post
 title: "Deep work series - episode 1"
 date: 2021-02-28 00:00 +0100
-categories: [book review]
+tags: "Interesting-ideas"
 published: true 
+author: "Giulia"
+hidden: true
 ---
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -12,7 +14,6 @@ published: true
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-167322471-2');
 </script>
 <script type="text/x-mathjax-config">
@@ -33,14 +34,6 @@ published: true
 <img src="https://m.media-amazon.com/images/I/51EJRm2IHOL.jpg" width="250"/>
 </a>
 </div>
-
-
-## Intro to the series
-
-<div align="justify">
-This is the first of a series of four articles that will revisit from a personal experience perspective some of the concepts emerging from the book titled "Deep Work" by Cal Newport. These articles belong to a single essay which I had written now more than an year ago and never published for its discouraging length. The series is organised as follows: except for the first (present) article, which also bears an introduction within itself, each post will be centered around a lesson. Working out the math you get four lessons in total. It certainly is going to be a reductive account of the content of the book that inspires the series, which is not meant to be by any means a complete summary of the former. The ideal reader would approach these blog posts with the spirit of a child who is about to be told a bedtime story: no expectations, but a curios mind.
-</div>
-<br>
 
 
 ## Intro to the topic
@@ -148,7 +141,7 @@ What Newport is saying here should seem counter-intuitive to those of us accusto
 This was it for today's lesson. See you on the next one. 
 
 <div align="center">
-<img src="https://media.giphy.com/media/aH8NW1eLKXS8g/giphy.gif" style="float: center;margin-right: 7px;margin-top: 0px;margin-btm:17px;">
+<img src="https://media.giphy.com/media/aH8NW1eLKXS8g/giphy.gif" style="float: center;margin-top: 0px;margin-btm:17px;">
 </div>
 
 <!--

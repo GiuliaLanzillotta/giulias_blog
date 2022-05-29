@@ -1,9 +1,11 @@
 ---
-layout: page
+layout: post
 title: "Deep work series - episode 4"
 date: 2021-03-17 10:24 +0100
-categories: [book review]
-published: false 
+tags: "Interesting-ideas"
+published: true 
+author: Giulia
+hidden: true
 ---
 # Lesson #4 and Closing remarks
 
@@ -40,7 +42,7 @@ The attention restoration theory (ART) claims that spending time in natural envi
 <br>
 
 So what is the point here: should you pack your stuff and drive away until you're surrounded by wilderness than pitch your tent there - #countrylife? 
-<br>Newport believes the implications of ART to expand beyond the benefits of the natural world. At the heart of it all is the idea that it is possible to restore our (highly valuable) ability to focus by assigning some time to a "relaxing activity", i.e. an occupation that does not require concentration. It doesn't have to be nature, but it must be something that charms you enough to avoid taking a break from the break to check emails. The more pressuring your duties (think of an approaching deadline) the harder it will be to separate from them, and the more you will unknowingly need to do it.</div>From the Deep Work book:
+<br>Newport believes the implications of ART to expand beyond the benefits of the natural world. At the heart of it all is the idea that it is possible to restore our (highly valuable) ability to focus by assigning some time to a "relaxing activity", i.e. an occupation that does not require concentration. It doesn't have to be nature, but it must be something that charms you enough to avoid taking a break from the break to check emails. The more pressuring your duties (think of an approaching deadline) the harder it will be to separate from them, and the more you will unknowingly need to do it. In Newport's words: </div>
 
 
 
@@ -48,20 +50,23 @@ So what is the point here: should you pack your stuff and drive away until you'r
 
 
 <div align="justify">
-I find the concept fascinating: that in the end achieving some goal is not about practice and will power, but instead it is about learning to let go<br>
-
-
-making value choices. Once you accept that your resources are finite what is left is to decide what to spend them on, and to let the rest go.<br>
+I find the concept fascinating: that in the end achieving some goal is not about practice and will power, but instead it is about learning to let go. Once you accept that your resources are finite what is left is to decide what to spend them on, and to drop the rest.<br>
 <br>
 Now it's time to see how you could go about integrating this periodic shutdown into your routine. <br>
-Newport suggests a strategy that we shall call the "evening shutdown": "no after-dinner email check, no mental replays of conversations, and no scheming about how you'll handle an upcoming challenge". The method is straight-forward: set a hard, non negotiable time limit to your workday and then shut down work thinking completely. It doesn't have to be after dinner, and it actually doesn't have to be in the evening at all. To this seemingly simple advice Newport adds the suggestion to adopt a shutdown ritual, i.e. a sequence of actions to be performed always in the same order to initiate the shutdown period. It might sound "cheesy" but it can actually make a difference. See, probably the main difficulty with the evening shutdown solution is that even if you decide to stop working your brain will likely keep going back to your pending tasks. A shutdown ritual is a way to tell your brain that it is safe to release work-related thoughts for the rest of the day. The ritual idea is based on what is known as the "Zeigarnik effect", named after the psychologist who discovered it the early 20th century, and a related recent study presented in the paper "Consider It Done!" by Roy Baumeister and E.J. Masicampo. The effect describes the ability of incomplete tasks to dominate our attention, which may make the idea of any kind of prolonged break seem a mirage. However, in the study mentioned above the two researchers discovered that simply making a plan for the unfinished work could significantly reduce the effect's impact. Treasuring the implications of this finding, Newport advises to include tasks review and planning into a shutdown ritual, to make it easier for your mind to let go off work for the rest of the day.
+Newport suggests a strategy that we shall call the <i>evening shutdown</i>: "no after-dinner email check, no mental replays of conversations, and no scheming about how you'll handle an upcoming challenge". The method is straight-forward: set a hard, non negotiable time limit to your workday and then shut down work thinking completely. It doesn't have to be after dinner, and it actually doesn't have to be in the evening at all. To this seemingly simple advice Newport adds the suggestion to adopt a shutdown ritual, i.e. a sequence of actions to be performed always in the same order to initiate the shutdown period. It might sound "cheesy" but it can actually make a difference. See, probably the main difficulty with the evening shutdown solution is that even if you decide to stop working your brain will likely keep going back to your pending tasks. A shutdown ritual is a way to tell your brain that it is safe to release work-related thoughts for the rest of the day. The ritual idea is based on what is known as the <i>Zeigarnik effect</i>, named after the psychologist who discovered it the early 20th century, and a related recent study presented in the paper "Consider It Done!" by Roy Baumeister and E.J. Masicampo. The effect describes the ability of incomplete tasks to dominate our attention, which may make the idea of any kind of prolonged break seem a mirage. However, in the study mentioned above the two researchers discovered that simply making a plan for the unfinished work could significantly reduce the effect's impact. Treasuring the implications of this finding, Newport advises to include tasks review and planning into a shutdown ritual, to make it easier for your mind to let go off work for the rest of the day.
 <br>
 <br>
-The fuck up day idea...
-
+Now, as I anticipated above, I had reached a similar conclusion on my own. Working everyday, morning to evening, with no pre-set limits, I noticed an inevitable decline in efficiency of my work hours: I was not actively distracting myself, perhaps picking up the phone or letting the YouTube recommendation system express itself freely in my watched history. No, I was doing my job: I was sitting at the desk, with my pen, books, notebooks; nothing missing, except my focus. I would find myself sometimes reading the same sentence multiple times, slowly (and very loudly in my head like my neurons had suddenly turned deaf). In essence, the usual configuration would stop working. Noticing this as a regular and frequent pattern in my work week, I decided to experiment with a counter-measure: completely shutting off all activities for 24 hours a week. The rest of the days have no limits on the working hours, i.e. I could potentially work all night if need be. I called this <i>the fuck-up day</i>. To my surprise, it worked like magic. I could stay motivated and focused throughout the week and I discovered that in the absence of downtime 6 days were actually more than enough to complete all my weekly tasks. And of course, having gained a day a week entirely for myself, I was especially content with the new arrangement. There is a disclaimer for the workaholics, and for those who make of their hobbies a second job. This trick is only effective if you <b>actually pull the plug and let go</b> during your fuck-up day. Relax. Turn off all the alarms, remove stress sources of any kind, just be. As the name says, you have to live the 'fuck-up day' as 24 hours in which you're allowed to 'fuck-up' all the rules and let go of all your duties. Take that part of your self that is still an unruly kid and let it choose what to do. It should be simple, if it's not then you're not doing it right.
+<br><br>
+Now let's look at the difference with what Newport says and let's wrap this lesson up. The main idea, constituting the core of both the strategies that I've just presented to you, essentially says that you should periodically carve some time work-free off your routine, to let your focus restore. There is a very fundamental difference with accidentally taking the evening or the day off because you have no more work to do or you're just too tired. And that is the planning component. Both the evening shutdown and the fuck-up day are an integral part of your routine: you know in advance that you're going to have this time for yourself, and there is a symbolic line separating your work from your leisure. I believe in a way the planning prepares your mind to the shutdown, so that when the time comes it is ready to fully let go. Now Newport suggests a daily shutdown, I instead use a weekly one. You might want to use a bi-weekly one (?) or look instead at a monthly range. However you do it, what matters is that you actually do it, meaning that you sit down and plan it wisely. Don't fool yourself: set realistic goals, adapt the rule to your routine as it is today, not as you'd want it to be (we can work on that another time). 
+<br><br>
+This closes our lesson, and, as we've just learned, when you're done, be done! Thank you for your time and good luck with your personalised productivity journey. <br><br>
 </div>
 
+Giulia
 
 
+<div align="center">
+<img src="https://media.giphy.com/media/aH8NW1eLKXS8g/giphy.gif" style="float: center;margin-top: 0px;margin-btm:17px;">
+</div>
 
-When you're done, be done.

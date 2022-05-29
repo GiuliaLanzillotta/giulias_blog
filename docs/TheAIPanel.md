@@ -2,7 +2,7 @@
 layout: page
 title: AI panel
 permalink: /AIPanel/
-published: false
+published: true
 ---
 
 ### Hello everyone, 
@@ -40,9 +40,6 @@ There is also another -more secondary- high-level goal, and this is probably the
 I'll be adding below the links to the posts taking part in this 'discussion panel' as they come out. Goodbye for now, wishing you dear reader to enjoy the uncertainty as much as the discoveries that usually come with it. 
 <br>
 
-# Links
-
-[Discussion 1]({% post_url 2020-08-17-TheAIPanel1 %})
 
 
 ##### A note to the non-experts. 

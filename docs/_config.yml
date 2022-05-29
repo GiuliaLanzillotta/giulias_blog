@@ -21,10 +21,9 @@ baseurl: "/giulias_blog" # the subpath of your site, e.g. /blog
 url: "https://giulialanzillotta.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: glanzillo11
 github_username:  GiuliaLanzillotta
-
+show_excerpts: false
 # Build settings
 markdown: kramdown
-theme: minima
 plugins:
   - jekyll-feed
 future: false
@@ -40,3 +39,9 @@ future: false
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+remote_theme: chesterhow/tale
+permalink:    /:year-:month-:day/:title
+paginate:     5
+plugins:
+  - jekyll-paginate
+  - jekyll-remote-theme

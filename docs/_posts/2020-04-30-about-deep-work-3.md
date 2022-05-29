@@ -1,9 +1,11 @@
 ---
-layout: page
+layout: post
 title: "Deep work series - episode 3"
 date: 2021-03-14 17:30 +0100
-categories: [book review]
+tags: "Interesting-ideas"
 published: true 
+author: Giulia
+hidden: true
 ---
 # Lesson #3
 
@@ -57,7 +59,7 @@ Now, these are all fascinating ideas, but, as the authors of 4DX admit, merely d
 
 
 <div align="center">
-<img src="https://media.giphy.com/media/26xor3JbJDdUm7trq/giphy.gif" width="250" style="float: center;margin-right: 7px;margin-top: 0px;margin-btm:17px;">
+<img src="https://media.giphy.com/media/26xor3JbJDdUm7trq/giphy.gif" width="250" style="float: center;margin-top: 0px;margin-btm:17px;">
 </div>
 
 <br> <br>
@@ -74,5 +76,5 @@ We've reached the end of this third post, let me know what you think and maybe t
 
 </div>
 <div align="center">
-<img src="https://media.giphy.com/media/aH8NW1eLKXS8g/giphy.gif" style="float: center;margin-right: 7px;margin-top: 0px;margin-btm:17px;">
+<img src="https://media.giphy.com/media/aH8NW1eLKXS8g/giphy.gif" style="float: center;margin-top: 0px;margin-btm:17px;">
 </div>

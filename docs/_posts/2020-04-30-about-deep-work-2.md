@@ -1,9 +1,11 @@
 ---
-layout: page
+layout: post
 title: "Deep work series - episode 2"
 date: 2021-03-06 00:10 +0100
-categories: [book review]
+tags: "Interesting-ideas"
 published: true 
+author: Giulia
+hidden: true
 ---
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -12,7 +14,6 @@ published: true
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-167322471-2');
 </script>
 <script type="text/x-mathjax-config">
@@ -94,5 +95,5 @@ We reached the end of a new episode. If you have any questions to ask, interesti
 </div>
 
 <div align="center">
-<img src="https://media.giphy.com/media/aH8NW1eLKXS8g/giphy.gif" style="float: center;margin-right: 7px;margin-top: 0px;margin-btm:17px;">
+<img src="https://media.giphy.com/media/aH8NW1eLKXS8g/giphy.gif" style="float: center;margin-top: 0px;margin-btm:17px;">
 </div>

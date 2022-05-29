@@ -2,8 +2,9 @@
 layout: post
 title:  "Stuff on human motion prediction"
 date:   2020-05-01 10:51:43 +0100
-categories: [topic review]
+tags: "AI-topics"
 published: true
+author: Giulia
 ---
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
