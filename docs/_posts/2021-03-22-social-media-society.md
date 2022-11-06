@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A brief history of social media"
-date: 2021-03-22 10:00 +0100
+date: 2022-11-06 16:00 +0100
 author: "Giulia"
 tags: "Thoughts-on-life,-the-universe-and-everything"
 published: true 

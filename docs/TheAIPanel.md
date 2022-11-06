@@ -2,7 +2,7 @@
 layout: page
 title: AI panel
 permalink: /AIPanel/
-published: true
+published: false
 ---
 
 ### Hello everyone, 
