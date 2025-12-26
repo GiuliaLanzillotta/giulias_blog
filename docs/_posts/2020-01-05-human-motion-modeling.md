@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Stuff on human motion prediction"
+title:  "Notes on human motion prediction"
 date:   2020-05-01 10:51:43 +0100
 tags: "AI-topics"
 published: true
@@ -28,16 +28,9 @@ author: Giulia
 </head>
 
 
-<h3>Hello everyone, welcome to my first topic review!</h3>
+<h3>Hello everyone, welcome to my first post!</h3>
 
-> <h4>Why should we be interested in Human motion prediction?</h4>
-
-To answer this question let me borrow the words of the authors of the first paper I'm going to submit to your attention. *"An important component of our capacity to interact with
-the world resides in the ability to predict its evolution over time. Handing an object to another person, playing sports, or simply walking in a crowded street would be extremely challenging without our understanding of how people move, and our ability to predict what they are likely to do in the following instants. Similarly, machines that are able to perceive and interact with moving people, either in physical or virtual environments, must have a notion of how people move."*<br>
-
-And now let's answer the second question that may have crossed your mind: 
-
-><h4>Why am writing this topic review?</h4> 
+><h4>Why am writing a topic review on human motion prediction?</h4> 
 
 The reason is that I am starting a new project on the topic and I'm anyway going to read a few papers on the subject. As I've recently discovered during one of my experiments on productivity sharing your work usually has the effect of pushing your quality bar higher. <br>
 Now let me cut here the premises here and dive into **Human Motion Prediction**. 
