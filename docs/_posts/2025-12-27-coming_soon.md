@@ -3,7 +3,7 @@ layout: post
 tags: "AI-topics"
 title: "Why I chose continual learning?"
 author: "Giulia"
-date: 2024-12-22 10:00 +0100
+date: 2025-12-27 10:00 +0100
 last_updated: 2025-05-08
 categories: [statements]
 published: true 

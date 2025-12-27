@@ -1,9 +1,9 @@
 ---
 layout: post
 tags: "AI-topics"
-title: "Why do I work on what I work on?"
+title: "Why I chose continual learning?"
 author: "Giulia"
-date: 2024-12-22 10:00 +0100
+date: 2025-12-27 10:00 +0100
 last_updated: 2025-05-08
 categories: [statements]
 published: false 
@@ -12,17 +12,23 @@ sticky: false
 hidden: false
 ---
 
-So, what is AI? Right now, you think deep learning, chat GPT and the like. But what can AI be ? 
+Coming soon...
 <!--more-->
 <br>
 <br>
 
+I did my phd on the topic of continual learning. The choice to focus on continual learning several years ago was less obvious than it is today. When I started, my research ambitions were no less and no more than understanding the foundations of intelligence. Real, human-like intelligence is what interested me. 
+
+Although I did not resolve right away to focus on continual learning, 
+Continual learning has always been at the heart of our conception of intelligence ... as proven by many pop movies
+
+... 
 
 I want to take the reader through a brief historical tour of our conceptualization of AI, to show that "continual learning" has always been in our imaginary of AI since the beginning. 
 
 Show some video clips of movies from different ages, where AI is an autonomous system, and autonomy has always come with the ability to adapt and change in time. 
 
-Somehow I want to get to talk about what I focus on, and that I believe in academia as it has the privilege to dream big and shoot far in the future. I wanna build an AI that has 100 years of autonomy (symbolic), like a human. So no centralized updates needed for at least 100 years. 
+Academia has the privilege to dream big and shoot far in the future. I wanna build an AI that has 100 years of autonomy (symbolic), like a human. So no centralized updates needed for at least 100 years. 
 
 Why is that a challenge today and what are the real limitations? 
 
