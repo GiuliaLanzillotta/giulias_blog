@@ -1,0 +1,9 @@
+In the story I have told you so far, continual learning deserves a central place in the machine learning research landscape nowadays. But in fact, although it is now gaining a new popularity, the topic has been niche and ignored for a long time now. I want to repropose to you some of those questions and main pushbacks on continual learning which I collected around conferences, or anywhere just talking to fellow ML researchers. 
+
+> Do we need continual learning when we have foundation models trained on the whole internet? 
+
+This is one of the most common questions. If the model already 'knows everything', what is there more to learn? I think the first point to make here is rather philosophical. Is there a limit to the amount of information and knowledge that the human species can accumulate? Can we ever say that the model knows 'everything'. I'm not a philosopher myself, but my intuition would suggest that the answer is 'no', and that, even if we were to discover the 'fundamental laws' governing the universe, life and everything, we would still not know everything. The point is, that there will always be something 'new' to learn. Simply think of the fact that we have news every day: do you imagine a future where newspaper run out of things to say? If so, let me know, I'm curious because I can't imagine it.
+
+> But we could simply train a new foundation model when there is enough accumulated new information and in the meantime we do some in-context learning or fine-tuning. We don't need continual learning. 
+
+Strictly speaking, I agree with this. But just think about the cost of this option. Say that the cost of training from scratch on the whole internet is somewhat proportional to the size of the internet itself. As the internet grows, the cost of training our foundation model grows with it. Each year, it grows by a bit. And probably it does not change linearly with time (think about it, we only have a few decades left to live).

@@ -1,6 +1,43 @@
 ---
 layout: default
 ---
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+
+<style>
+  /* 2. Apply the Readable Style */
+  .drop-cap::first-letter,
+  p.drop-cap::first-letter {
+    float: none !important;
+    display: inline-block !important;
+    
+    /* The New Font Family */
+    font-family: 'MedievalSharp', cursive !important;
+    
+    font-size: 80px !important;
+    line-height: 0.8 !important;
+    vertical-align: -5px !important; /* Tweak this number to align bottom */
+    margin-right: 5px;
+    margin-bottom: -10px;
+    font-weight: normal; 
+  }
+</style>
+<!-- <style>
+  /* The "Raised Cap" Style */
+  .drop-cap::first-letter,
+  p.drop-cap::first-letter {
+    float: none !important;            /* Stop floating (this fixes the overlapping text below) */
+    display: inline-block !important;  /* Allows us to control height/margin */
+    font-size: 80px !important;        /* Keep it big */
+    line-height: 0.8 !important;       /* Keeps the letter height tight */
+    vertical-align: baseline !important; /* Forces it to sit on the same line as the text */
+    margin-right: 8px;                 /* Space between the big letter and the small text */
+    margin-bottom: -10px;              /* OPTIONAL: Tweak this if it sits too high off the line */
+    font-family: Georgia, "Times New Roman", serif;
+    /* font-weight: bold; */
+  }
+</style> -->
 
 <div class="post">
   <div class="post-info">

@@ -49,6 +49,8 @@ GEM
       jekyll (>= 3.8, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
+    jekyll-youtube (1.0.0)
+      jekyll
     kramdown (2.5.1)
       rexml (>= 3.3.9)
     kramdown-parser-gfm (1.1.0)
@@ -97,6 +99,7 @@ DEPENDENCIES
   jekyll-paginate
   jekyll-remote-theme
   jekyll-seo-tag
+  jekyll-youtube
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.0)
