@@ -39,7 +39,7 @@ This is my blog, which is a space where I feel free to share my thoughts and mos
 
 ## News
 
-I do research on *continual learning*. If you want to know why, check out my post [this page]({{ site.baseurl }}/2025-12-27/coming_soon). 
+I do research on *continual learning*. If you want to know why, check out my post [this page]({{ site.baseurl }}/2025-12-27/why-continual-learning). 
 
 Here's the latest:
 
