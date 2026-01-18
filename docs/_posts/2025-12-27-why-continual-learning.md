@@ -11,6 +11,17 @@ excerpt_separator: <!--more-->
 sticky: false
 hidden: false
 ---
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167322471-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-167322471-2');
+</script>
+</head>
+
 
 I started writing this post exactly a year ago, on the flight back from NeurIPS. At the conference, I found myself in a perpetual cycle of presenting and defending the necessity of continual learning, articulating its nuances so frequently that my responses crystallized into a practiced defense. I intended to commit those thoughts to paper immediately, but as is often the case, the friction of life and a persistent academic perfectionism delayed the process.
 In the time since, those memorized arguments have dissolved into something else, and this is a new, final version of that post, written by a slightly older version of myself. 

@@ -7,6 +7,17 @@ excerpt_separator: <!--more-->
 sticky: false
 hidden: false
 ---
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167322471-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-167322471-2');
+</script>
+</head>
+
 
 Ever wished to be more productive? Ever felt frustrated for not feeling in control of your days? Ever thought of locking yourself in a room and throwing away the key at the risk of starving to force you to work? If any of the answers to these question is yes, I think you'll find this series of posts interesting.  <!--more-->
 
